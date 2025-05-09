@@ -1,0 +1,28 @@
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+#!wp-content/
+#wp-content/themes/*
+#wp-config.php
+#!ct.sql
+!_tp/
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+
+#wp-content/plugins/*
+#!wp-content/plugins/ctapi/
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+!wp-content/
+wp-content/languages/
+wp-content/plugins/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/themes/*
+!wp-content/themes/bonaccordkitchens/
+
+
