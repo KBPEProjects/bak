@@ -5,45 +5,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Homepage V1 base template</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="dist/css/main.min.css" />
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <a href="">
-                    <img src="rsc/" alt="BAK Logo" title="BAK Logo" />
-                </a>
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="#">
+                        <img src="rsc/baklogo.png" alt="BAK Logo" title="BAK Logo" />
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Kitchens</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                        <li><a href="#">Our Showroom</a></li>
+                    </ul>
+                </nav>
+                <div class="call">
+                    <a href="tel:01224980221">Call 01224 980221</a>
+                </div>
+                <div class="cta">
+                    <a href="#">Book your Design Consultation</a>
+                </div>
             </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Kitchens</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Inspiration</a></li>
-                    <li><a href="#">Our Showroom</a></li>
-                </ul>
-            </nav>
-            <div class="call">
-                <a href="">Call 01224 980221</a>
-            </div>
-            <div class="cta">
-                <a href="">Book your Design Consultation</a>
-            </div>            
         </div>
     </header>
 
-    <div class="splash-block" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8)">
-        <div class="container">
-            <div class="splash-revolver">
-                <h1>The Kitchen:<br />the heart of the home</h1>
-                <p>Expertly made, Exceptionally beautiful</p>
-                <p>
-                    <a href="#">Book Your Design Consultation</a>
-                </p>
-            </div>            
+    <div class="splash-block" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8.jpg)">
+        <div class="bgblack">
+            <div class="container">
+                <div class="splash-revolver"><?php
+                for($i=0;$i<3;$i++){ ?>
+                    <div class="slidr">
+                        <div>
+                            <h1><?= $i;?> The Kitchen:<br />the heart of the home</h1>
+                            <p>Expertly made, Exceptionally beautiful</p>
+                            <p>
+                                <a href="#">Book Your Design Consultation</a>
+                            </p>                            
+                        </div>
+                    </div><?php
+                } ?>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -168,6 +180,10 @@
             </div>            
         </div>
     </div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    
+    <script type="text/javascript" src="js/core.js"></script>
 </body>
 
 </html>

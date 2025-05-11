@@ -1,0 +1,66 @@
+@font-face {
+  font-family: GothamHTFBook;
+  src: url(../fonts/GothamHTF-Book.otf);
+}
+@font-face {
+  font-family: GothamHTFMedium;
+  src: url(../fonts/GothamHTF-Medium.otf);
+}
+@font-face {
+  font-family: MinionProRegular;
+  src: url(../fonts/MinionPro-Regular.otf);
+}
+@font-face {
+  font-family: ProximaNovaRegular;
+  src: url(../fonts/ProximaNova-Regular.otf);
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: GothamHTFMedium;
+}
+
+header {
+  background-color: #2F2A2C;
+}
+header .container .nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .container .nav-wrapper nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.splash-block {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.splash-block .bgblack {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.splash-block .bgblack .splash-revolver .slidr {
+  height: 900px;
+  padding-top: 400px;
+}
+.splash-block .bgblack .splash-revolver .slidr p a {
+  color: black;
+}/*# sourceMappingURL=main.css.map */
