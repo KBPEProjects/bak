@@ -24,6 +24,7 @@ p.cta{
         font-size: 2rem;
     }
 }
+.bgblack{ background-color: rgba(0,0,0,0.3);}
 .btnlink{
     font-family: GothamHTFBook;
     text-transform: uppercase;
@@ -114,7 +115,6 @@ p.cta{
     }
     
 }
-
 .arrows-right{
     padding: 0 5%;
     .slick-arrow{
@@ -144,7 +144,7 @@ p.cta{
         background-size: cover;
         height: 550px;
         &.roundr{
-            border-radius:2rem;
+            border-radius:4rem;
         }
     }
     .feature-content{
@@ -160,7 +160,6 @@ p.cta{
         width: 50%;
     }
 }
-
 
 .bon-accord-kitchens-styles{
     .feature-block{
@@ -196,11 +195,22 @@ p.cta{
                 height: 600px
             }
             .classic-gallery-content{
+                padding: 2rem 0;
                 .classic-gallery-content-block{
+                    margin-bottom:0;
+                    justify-content:unset;
                     li{
+                        padding: 0 2rem;
+                        border-right:1px solid $col_dark;
                         text-align: left;
                         &.active{
-                            color: $col_lgrey;
+                            color: #aaa;
+                        }
+                        h3,p{
+                            margin-bottom: 0;
+                        }
+                        &:last-child{
+                            border-right:none;
                         }
                     }
                 }
@@ -217,12 +227,13 @@ p.cta{
         }
         .feature-photo{
             text-align: right;
+            margin-right: 7%;
             .feature-photo-inset{
                 width: 250px;
                 height: 250px;
                 border-radius: 125px;
                 overflow: hidden;
-                border: 3px solid white;
+                border: 6px solid white;
                 margin-top: -40px;
                 margin-right: -40px;
             }
@@ -233,9 +244,9 @@ p.cta{
     .testimonial-block{
         padding: 30px;
         .testimonial-quote{
-            filter: drop-shadow(5px 16px 12px #ccc);
+            filter: drop-shadow(4px 4px 4px #ccc);
             background-color: $col_white;
-            border-radius: 15px;
+            border-radius: 3rem;
             padding: 50px;
             text-align: left;
             p{
@@ -254,5 +265,42 @@ p.cta{
         }
     }
 }
+
+/*HOMEPAGE 2*/
+.vert{ 
+    margin-bottom:0 !important;
+    li{
+        width:100%;
+        .feature-block{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom:0;
+            .feature-photo{
+                text-align: left;
+                padding: 2rem;
+                height: 400px;
+                i{
+                    font-size: 3rem;
+                    color: $col_white;
+                }
+            }
+            .feature-content{
+                text-align: center;
+            }
+            .feature-photo, .feature-content{
+                width:100%;
+            }
+        }
+    }
+}
+.bon-accord-classic-kitchen-favourites .vert .feature-block .feature-content p{
+    margin-bottom: 2rem;
+}
+.bon-accord-classic-kitchen-favourites .vert .feature-block .feature-content.lined p{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $col_dark
+}
+
 
 @import "_header";

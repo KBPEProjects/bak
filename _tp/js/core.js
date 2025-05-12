@@ -10,6 +10,7 @@ jQuery(document).ready(function(){
             slidesToShow:1,
             slidesToScroll:1,
             autoplaySpeed:3000,
+            pauseOnHover:false,
             cssEase: 'linear',
             prevArrow:'<i class="fa-solid fa-chevron-left l"></i>',
             nextArrow:'<i class="fa-solid fa-chevron-right r"></i>',

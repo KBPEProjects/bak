@@ -40,9 +40,10 @@ header{
                             padding-bottom: 8px;
                         }
                         &:first-child::marker{
-                            content: "\e3af"; /* FontAwesome Unicode */
+                            content: "\f015"; /* FontAwesome Unicode */
                             font-family: "Font Awesome 6 Free";
                             color: $col_white;
+                            font-weight: bold;
                         }
                         &.active:first-child::marker{
                             color: $col_neutral !important;
@@ -61,13 +62,11 @@ header{
         }
     }
 }
-
 .splash-block{
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     .bgblack{
-        background-color: rgba(0,0,0,0.3);
         .splash-revolver{
             .slick-arrow{
                 top: 40%;
@@ -86,7 +85,7 @@ header{
                 align-items: center;
                 height: 900px;
                 &.shortr{
-                    height: 1000px;
+                    height: 650px;
                 }
                 /*align-items: center;
                 justify-content: center;*/

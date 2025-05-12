@@ -60,6 +60,10 @@ p.cta.call a {
   font-size: 2rem;
 }
 
+.bgblack {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .btnlink {
   font-family: GothamHTFBook;
   text-transform: uppercase;
@@ -191,7 +195,7 @@ p.cta.call a {
   height: 550px;
 }
 .feature-block .feature-photo.roundr {
-  border-radius: 2rem;
+  border-radius: 4rem;
 }
 .feature-block .feature-content {
   background-position: center;
@@ -233,11 +237,28 @@ p.cta.call a {
 .classic-gallery .classic-gallery-block .classic-gallery-revolver .photo-slide {
   height: 600px;
 }
+.classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content {
+  padding: 2rem 0;
+}
+.classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content .classic-gallery-content-block {
+  margin-bottom: 0;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+}
 .classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content .classic-gallery-content-block li {
+  padding: 0 2rem;
+  border-right: 1px solid #2F2A2C;
   text-align: left;
 }
 .classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content .classic-gallery-content-block li.active {
-  color: #F3F2F2;
+  color: #aaa;
+}
+.classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content .classic-gallery-content-block li h3, .classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content .classic-gallery-content-block li p {
+  margin-bottom: 0;
+}
+.classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content .classic-gallery-content-block li:last-child {
+  border-right: none;
 }
 
 .bon-accord-heather-classic-kitchen .feature-block .feature-content h2 {
@@ -245,13 +266,14 @@ p.cta.call a {
 }
 .bon-accord-heather-classic-kitchen .feature-block .feature-photo {
   text-align: right;
+  margin-right: 7%;
 }
 .bon-accord-heather-classic-kitchen .feature-block .feature-photo .feature-photo-inset {
   width: 250px;
   height: 250px;
   border-radius: 125px;
   overflow: hidden;
-  border: 3px solid white;
+  border: 6px solid white;
   margin-top: -40px;
   margin-right: -40px;
 }
@@ -260,10 +282,10 @@ p.cta.call a {
   padding: 30px;
 }
 .testimonials-revolver .testimonial-block .testimonial-quote {
-  -webkit-filter: drop-shadow(5px 16px 12px #ccc);
-          filter: drop-shadow(5px 16px 12px #ccc);
+  -webkit-filter: drop-shadow(4px 4px 4px #ccc);
+          filter: drop-shadow(4px 4px 4px #ccc);
   background-color: #FFFFFF;
-  border-radius: 15px;
+  border-radius: 3rem;
   padding: 50px;
   text-align: left;
 }
@@ -276,6 +298,51 @@ p.cta.call a {
 }
 .contact p.cta.call {
   margin-bottom: 0;
+}
+
+/*HOMEPAGE 2*/
+.vert {
+  margin-bottom: 0 !important;
+}
+.vert li {
+  width: 100%;
+}
+.vert li .feature-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+}
+.vert li .feature-block .feature-photo {
+  text-align: left;
+  padding: 2rem;
+  height: 400px;
+}
+.vert li .feature-block .feature-photo i {
+  font-size: 3rem;
+  color: #FFFFFF;
+}
+.vert li .feature-block .feature-content {
+  text-align: center;
+}
+.vert li .feature-block .feature-photo, .vert li .feature-block .feature-content {
+  width: 100%;
+}
+
+.bon-accord-classic-kitchen-favourites .vert .feature-block .feature-content p {
+  margin-bottom: 2rem;
+}
+
+.bon-accord-classic-kitchen-favourites .vert .feature-block .feature-content.lined p {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #2F2A2C;
 }
 
 .container {
@@ -338,9 +405,10 @@ header .container .nav-wrapper nav ul li a {
   padding-bottom: 8px;
 }
 header .container .nav-wrapper nav ul li:first-child::marker {
-  content: "\e3af"; /* FontAwesome Unicode */
+  content: "\f015"; /* FontAwesome Unicode */
   font-family: "Font Awesome 6 Free";
   color: #FFFFFF;
+  font-weight: bold;
 }
 header .container .nav-wrapper nav ul li.active:first-child::marker {
   color: #CCC1A7 !important;
@@ -358,9 +426,6 @@ header .container .nav-wrapper .call {
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.splash-block .bgblack {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 .splash-block .bgblack .splash-revolver .slick-arrow {
   top: 40%;
@@ -388,7 +453,7 @@ header .container .nav-wrapper .call {
   justify-content: center;*/
 }
 .splash-block .bgblack .splash-revolver .slidr-stage.shortr {
-  height: 1000px;
+  height: 650px;
 }
 .splash-block .bgblack .splash-revolver .slidr-stage .slidr {
   color: #FFFFFF;

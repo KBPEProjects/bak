@@ -27,13 +27,13 @@ include("header.php");
                 <h2>Classic Kitchen Favourites</h2>
                 <p>Our customer favourites.. Designed for modern living, individuality and practicality that will sit comfortably in the busy world and lifestyles of today. Recently, modern classic style has enjoyed a resurgence in popularity in the kitchen.</p>
             </div>
-            <ul>
+            <ul class="vert">
             <?php for($i=0;$i<3;$i++){ ?><li>
                 <div class="feature-block">
                     <div class="feature-photo" style="background-image:url(rsc/Ashbourne-gallery-8.jpg)">
-                        [LOVEHEART]
+                        <i class="fa-solid fa-heart"></i>
                     </div>
-                    <div class="feature-content">
+                    <div class="feature-content lined">
                         <h3>Ashbourne</h3>
                         <p>
                             <strong>Grained Painted Effect</strong> volum sumquodit velliquis cumquat ugia volum sumquodit.
@@ -56,10 +56,10 @@ include("header.php");
                     Recently, modern classic style has enjoyed a resurgence in popularity in the kitchen.
                 </p>
             </div>
-            <ul>
+            <ul class="vert">
             <?php for($i=0;$i<2;$i++){ ?><li>
                 <div class="feature-block">
-                    <div class="feature-photo" style="background-image:url(rsc/Ashbourne-gallery-7.jpg)">
+                    <div class="feature-photo roundr" style="background-image:url(rsc/Ashbourne-gallery-7.jpg)">
                         <img src="rsc/" alt="" title="" />
                     </div>
                     <div class="feature-content">
@@ -119,7 +119,7 @@ include("header.php");
                 <h2>It's all in the detail</h2>
                 <p>Add a personal touch to any kitchen range with customisable, bespoke elements and features designed to elevate the style and functionality of your space. Create your dream kitchen, tailored to your unique taste and lifestyle.</p>
             </div>
-            <ul>
+            <ul class="vert">
             <?php for($i=0;$i<3;$i++){ ?><li>
                 <div class="feature-block">
                     <div class="feature-photo" style="background-image:url(rsc/Knob-Handles-Inner.jpg)">
@@ -145,12 +145,12 @@ include("header.php");
 
     <div class="content-block bon-accord-kitchens-showroom">
         <div class="container">
-            <ul>
+            <ul class="vert">
                 <li>
                     <div class="feature-block">
                         <div class="feature-photo">
-                            <img src="rsc/Bon Accord Kitchens_Showroom.svg" alt="" title="" />
                         </div>
+                            <img src="rsc/Bon Accord Kitchens_Showroom.svg" alt="" title="" />
                         <div class="feature-content">
                             <h3>Visit Aberdeen Showroom</h3>
                             <p>Be inspired! Explore the full range of stunning Kitchen collections, workstops, colours and finishes in person</p>
@@ -161,8 +161,8 @@ include("header.php");
                 <li>
                     <div class="feature-block">
                         <div class="feature-photo">
-                            <img src="rsc/Bon Accord Kitchens_Design Appointment.svg" alt="" title="" />
                         </div>
+                            <img src="rsc/Bon Accord Kitchens_Design Appointment.svg" alt="" title="" />
                         <div class="feature-content">
                             <h3>Free Design Appointment</h3>
                             <p>See your new Kitchen come to life from the comfort of your own home with one of our friendly Kitchen designer.</p>
@@ -183,7 +183,7 @@ include("header.php");
     <div class="content-block dark bon-accord-heather-classic-kitchen">
         <div class="container">
             <div class="feature-block">
-                <div class="feature-content">
+                <div class="feature-content paddr">
                     <h2>Heather's Classic <br /> Country Kitchen</h2>
                     <p>
                         Get inspired by exploring our customer kitchens, showcasing favorite styles, trends, and features to bring to your own space.<br /> 
@@ -193,8 +193,8 @@ include("header.php");
                         <a class="btnlink neutral" href="#">View Kitchen</a>
                     </p>
                 </div>
-                <div class="feature-photo" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8.jpg)">
-                    <img class="feature-photo-inset" style="background-image:url(rsc/Brazen-Magnet-Milford-28.webp)" alt="" title="" />
+                <div class="feature-photo roundr" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8.jpg)">
+                    <img class="feature-photo-inset" src="rsc/Brazen-Magnet-Milford-28.webp" alt="" title="" />
                 </div>
             </div>
         </div>
