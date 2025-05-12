@@ -1,59 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homepage V2 base template</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
+<?php
+$i= 2;
+include("header.php");
+?>
 
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="">
-                    <img src="rsc/" alt="BAK Logo" title="BAK Logo" />
-                </a>
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Kitchens</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Inspiration</a></li>
-                    <li><a href="#">Our Showroom</a></li>
-                </ul>
-            </nav>
-            <div class="call">
-                <a href="">Call 01224 980221</a>
-            </div>
-            <div class="cta">
-                <a href="">Book your Design Consultation</a>
-            </div>
-        </div>
-    </header>
-
-    <div class="splash-block" style="background-image:url(rsc/Carnegie-stone-grey-heritage-grey-Gallery-1.png)">
-        <div class="container">
-            <div class="splash-revolver">
+    <div class="splash-block" style="background-image:url(rsc/Carnegie-stone-grey-heritage-grey-Gallery-1.jpg)">
+        <div class="bgblack">
+            <div class="container">
+                <div class="splash-revolver">
+                    <div>
+                        <div class="slidr-stage">
+                            <div class="slidr lef">
                 <h1>Classic Kitchen <br/>Collection</h1>
                 <p>Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodit. Atur sim rerum list fugia volum</p>
-            </div>            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
+
     <div class="content-block bon-accord-classic-kitchen-favourites">
         <div class="container">
             <div class="heading-block">
                 <h2>Classic Kitchen Favourites</h2>
                 <p>Our customer favourites.. Designed for modern living, individuality and practicality that will sit comfortably in the busy world and lifestyles of today. Recently, modern classic style has enjoyed a resurgence in popularity in the kitchen.</p>
             </div>
-            <?php
-            for($i=0;$i<3;$i++){ ?>
+            <ul>
+            <?php for($i=0;$i<3;$i++){ ?><li>
                 <div class="feature-block">
-                    <div class="feature-photo" style="background-image:url(rsc/Ashbourne-gallery-8.png)">
+                    <div class="feature-photo" style="background-image:url(rsc/Ashbourne-gallery-8.jpg)">
                         [LOVEHEART]
                     </div>
                     <div class="feature-content">
@@ -62,13 +39,15 @@
                             <strong>Grained Painted Effect</strong> volum sumquodit velliquis cumquat ugia volum sumquodit.
                         </p>
                     </div>
-                </div><?php
-            }
-            ?>            
+                </div></li><?php
+            } ?>
+            </ul>
         </div>
     </div>
 
-    <div class="content-block bon-accord-latest-classic-kitchens">
+
+
+    <div class="content-block lgrey bon-accord-latest-classic-kitchens">
         <div class="container">
             <div class="heading-block">
                 <h2>Our latest Classic Kitchens</h2>
@@ -77,10 +56,10 @@
                     Recently, modern classic style has enjoyed a resurgence in popularity in the kitchen.
                 </p>
             </div>
-            <?php
-            for($i=0;$i<2;$i++){ ?>
+            <ul>
+            <?php for($i=0;$i<2;$i++){ ?><li>
                 <div class="feature-block">
-                    <div class="feature-photo" style="background-image:url(rsc/BAK_Brochure_Cover_Mockup_Full.png)">
+                    <div class="feature-photo" style="background-image:url(rsc/Ashbourne-gallery-7.jpg)">
                         <img src="rsc/" alt="" title="" />
                     </div>
                     <div class="feature-content">
@@ -89,16 +68,16 @@
                             <strong></strong> short description of kitchen range and style here.
                         </p>
                         <p>
-                            <a href="#">View Gallery</a>
+                            <a class="btnlink outline blue" href="#">View Gallery</a>
                         </p>
                     </div>
-                </div><?php
-            }
-            ?>
+                </div></li><?php
+            } ?>
+            </ul>
         </div>
     </div>
 
-    <div class="content-block classic-gallery">
+    <div class="content-block dark classic-gallery">
         <div class="container">
             <div class="heading-block">
                 <h2>• The Classic Gallery •</h2>
@@ -109,7 +88,7 @@
             <div class="classic-gallery-block">
                 <div class="classic-gallery-revolver">
                     <?php for($i=0;$i<5;$i++){ ?>
-                        <div><div class="photo-slide" style="background-image:url(rsc/Ashbourne-gallery-2.png)"></div></div>
+                        <div><div class="photo-slide" style="background-image:url(rsc/Ashbourne-gallery-2.jpg)"></div></div>
                         <?php
                     } ?>
                 </div>
@@ -137,22 +116,22 @@
                 <h2>It's all in the detail</h2>
                 <p>Add a personal touch to any kitchen range with customisable, bespoke elements and features designed to elevate the style and functionality of your space. Create your dream kitchen, tailored to your unique taste and lifestyle.</p>
             </div>
-            <?php
-            for($i=0;$i<3;$i++){ ?>
+            <ul>
+            <?php for($i=0;$i<3;$i++){ ?><li>
                 <div class="feature-block">
-                    <div class="feature-photo" style="background-image:url(rsc/Knob-Handles-Inner.png)">
+                    <div class="feature-photo" style="background-image:url(rsc/Knob-Handles-Inner.jpg)">
                     </div>
                     <div class="feature-content">
                         <h3>Worktops</h3>
                         <p>We have a stunning array of workstops to complement your kitchen style...Us am explict invelectiam, con nem fuga. Aliquia dolent laut quame perions equatu.</p>
                     </div>
-                </div><?php
-            }
-            ?>            
+                </div></li><?php
+            } ?>
+            </ul>
         </div>
     </div>
 
-    <div class="content-block bon-accord-kitchens-next-steps">
+    <div class="content-block coreblue bon-accord-kitchens-next-steps">
         <div class="container">
             <div class="heading-block">
                 <h2>Next Steps</h2>
@@ -163,30 +142,42 @@
 
     <div class="content-block bon-accord-kitchens-showroom">
         <div class="container">
-            <div class="feature-block">
-                <div class="feature-photo">
-                    <img src="rsc/Bon Accord Kitchens_Showroom.svg" alt="" title="" />
-                </div>
-                <div class="feature-content">
-                    <h3>Visit Aberdeen Showroom</h3>
-                    <p>Be inspired! Explore the full range of stunning Kitchen collections, workstops, colours and finishes in person</p>
-                    <p><a href="#">GET DIRECTIONS</a></p>
-                </div>
-            </div>
-            <div class="feature-block">
-                <div class="feature-photo">
-                    <img src="rsc/Bon Accord Kitchens_Design Appointment.svg" alt="" title="" />
-                </div>
-                <div class="feature-content">
-                    <h3>Free Design Appointment</h3>
-                    <p>See your new Kitchen come to life from the comfort of your own home with one of our friendly Kitchen designer.</p>
-                    <p><a href="#">BOOK DESIGN APPOINTMENT</a></p>
-                </div>
-            </div>            
+            <ul>
+                <li>
+                    <div class="feature-block">
+                        <div class="feature-photo">
+                            <img src="rsc/Bon Accord Kitchens_Showroom.svg" alt="" title="" />
+                        </div>
+                        <div class="feature-content">
+                            <h3>Visit Aberdeen Showroom</h3>
+                            <p>Be inspired! Explore the full range of stunning Kitchen collections, workstops, colours and finishes in person</p>
+                            <p><a class="btnlink outline blue" href="#">GET DIRECTIONS</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-block">
+                        <div class="feature-photo">
+                            <img src="rsc/Bon Accord Kitchens_Design Appointment.svg" alt="" title="" />
+                        </div>
+                        <div class="feature-content">
+                            <h3>Free Design Appointment</h3>
+                            <p>See your new Kitchen come to life from the comfort of your own home with one of our friendly Kitchen designer.</p>
+                            <p><a class="btnlink outline blue" href="#">BOOK DESIGN APPOINTMENT</a></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 
-    <div class="content-block bon-accord-kitchens-collection-brochure">
+
+
+
+
+
+
+    <div class="content-block dark bon-accord-kitchens-collection-brochure">
         <div class="container">
             <div class="feature-block">
                 <div class="feature-content">
@@ -196,24 +187,31 @@
                         See these kitchens in action and discover how Bon Accord Kitchens have truly become the heart of each home.
                     </p>
                     <p>
-                        <a href="#">View Kitchen</a>
+                        <a class="btnlink neutral" href="#">View Kitchen</a>
                     </p>
                 </div>
-            </div>
-            <div class="feature-photo" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8.png)">
-                <div class="feature-photo-inset" style="background-image:url(rsc/Brazen-Magnet-Milford-28.png)">
+                <div class="feature-photo" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8.jpg)">
+                    <div class="feature-photo-inset" style="background-image:url(rsc/Brazen-Magnet-Milford-28.jpg)">
+                    </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </div>
 
-    <div class="testimonials-block">
+
+
+
+
+
+
+    <div class="content-block lgrey testimonials-block">
         <div class="container">
             <div class="heading-block">
                 <h2>Why customers love Bon Accord</h2>
                 <p>Don't just take our word for it! Read the latest Bon Accord Kitchen reviews, according to our customers...</p>
             </div>
             <div class="testimonials-revolver">
+            <?php for($i=0;$i<6;$i++){ ?>
                 <div class="testimonial-block">
                     <div class="testimonial-quote">
                         <h3>“Top-notch service”</h3>
@@ -230,13 +228,13 @@
                         <h4>Mrs Duncan</h4>
                     </div>
                 </div>
-            </div>            
+            <?php } ?>
+            </div>
         </div>
     </div>
 
 
-
-    <div class="content-block bon-accord-kitchens-manufacturers">
+    <div class="content-block white bon-accord-kitchens-manufacturers">
         <div class="container">
             <div class="heading-block">
                 <h2>Luxury for every lifestyle</h2>
@@ -248,28 +246,12 @@
                 <li><a href=""><img src="rsc/brand_nobilia.png" alt="" title="" /></a></li>
             </ul>
             <p>
-                <a href="#">Kitchen Brands</a>
-            </p>            
+                <a class="btnlink" href="#">Kitchen Brands</a>
+            </p>
         </div>
     </div>
 
-    <div class="content-block contact">
-        <div class="container">
-            <div class="block-details">
-                <div class="heading-block">
-                    <h2>Speak to our team</h2>
-                    <p>
-                        Would you like to discuss your Kitchen plans with us today?<br />
-                        Our friendly team will be pleased to help with any questions you may have.<br />
-                        Give us a call on
-                    </p>
-                </div>
-                <p>
-                    <a href="tel:01224980221">01224 980221</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</body>
 
-</html>
+<?php
+include("footer.php");
+?>

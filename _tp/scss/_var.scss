@@ -1,23 +1,29 @@
 
 $font_black: #201f24;
 $col_dark: #2F2A2C;
-$col_core_blue: #003057;
+$col_core_blue: #5a7d95;
 $col_neutral: #CCC1A7;
-$col_white: #FFF;
+$col_white: #FFFFFF;
+$col_lgrey: #F3F2F2;
 
+@font-face { /* Title font */
+  font-family: MinionPro;
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/MinionPro-Regular.otf);
+}
+@font-face {
+  font-family: ProximaNova;
+  font-style: normal;
+  src: url(../../fonts/ProximaNova-Regular.otf);
+}
 @font-face {
   font-family: GothamHTFBook;
-  src: url(../fonts/GothamHTF-Book.otf);
+  font-style: normal;
+  src: url(../../fonts/GothamHTF-Book.otf);
 }
 @font-face {
   font-family: GothamHTFMedium;
-  src: url(../fonts/GothamHTF-Medium.otf);
-}
-@font-face {
-  font-family: MinionProRegular;
-  src: url(../fonts/MinionPro-Regular.otf);
-}
-@font-face {
-  font-family: ProximaNovaRegular;
-  src: url(../fonts/ProximaNova-Regular.otf);
+  font-weight: 600;
+  src: url(../../fonts/GothamHTF-Medium.otf);
 }

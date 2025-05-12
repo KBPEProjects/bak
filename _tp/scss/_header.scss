@@ -1,14 +1,27 @@
+.container{
+    padding: 0 5%;
+}
 header{
     background-color: $col_dark;
     .container{
+        padding: 0 5%;
         .nav-wrapper{
             display: flex;
             align-items: center;
             justify-content: space-between;
+            font-family: GothamHTFBook;
+            a{
+                color: $col_white;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
             .logo{
                 a{
+                    display: block;
+                    padding: 50px 80px;
+                    background-color: $col_white;
                     img{
-
+                        height: 50px;
                     }
                 }
             }
@@ -17,19 +30,25 @@ header{
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
+                    list-style: none;
+                    list-style-type: none;
                     li{
-
+                        a{
+                            padding-bottom: 8px;
+                        }
+                        &:first-child::marker{
+                            content: "\e3af"; /* FontAwesome Unicode */
+                            font-family: "Font Awesome 6 Free";
+                            color: $col_white;
+                        }
+                        &.active:first-child::marker{
+                            color: $col_neutral !important;
+                        }
+                        &.active a{
+                            color: $col_neutral !important;
+                            border-bottom: 1px solid $col_neutral !important;
+                        }
                     }
-                }
-            }
-            .call{
-                a{
-
-                }
-            }
-            .cta{
-                a{
-
                 }
             }
         }
@@ -41,15 +60,43 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     .bgblack{
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0,0,0,0.3);
         .splash-revolver{
-            .slidr{
+            .slick-arrow{
+                top: 40%;
+                padding: 5%;
+                z-index: 5;
+                color: rgba(255,255,255,0.5);
+                font-size: 40px;
+                position: absolute;
+                &.r{
+                    right: 0;
+                }
+            }
+            .slidr-stage{
+                display: flex;
                 height: 900px;
-                padding-top: 400px;
-                h1{}
-                p{
-                    a{
-                        color: black;
+                justify-content: center;
+                align-items: center;
+                /*align-items: center;
+                justify-content: center;*/
+                .slidr{
+                    color: $col_white;
+                    text-align: center;
+                    width:100%;
+                    h1{
+                        font-family: MinionPro;
+                        font-size: 92px;
+                    }
+                    p{
+                        font-family: GothamHTFMedium;
+                        font-size: 22px;
+                        a{
+                            margin-top:22px;
+                        }
+                    }
+                    &.lef{
+                        text-align: left;
                     }
                 }
             }

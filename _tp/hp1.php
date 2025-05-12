@@ -1,56 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homepage V1 base template</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
-    <link rel="stylesheet" href="dist/css/main.min.css" />
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="#">
-                        <img src="rsc/baklogo.png" alt="BAK Logo" title="BAK Logo" />
-                    </a>
-                </div>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Kitchens</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Inspiration</a></li>
-                        <li><a href="#">Our Showroom</a></li>
-                    </ul>
-                </nav>
-                <div class="call">
-                    <a href="tel:01224980221">Call 01224 980221</a>
-                </div>
-                <div class="cta">
-                    <a href="#">Book your Design Consultation</a>
-                </div>
-            </div>
-        </div>
-    </header>
+<?php
+$i= 1;
+include("header.php");
+?>
 
     <div class="splash-block" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8.jpg)">
         <div class="bgblack">
             <div class="container">
                 <div class="splash-revolver"><?php
                 for($i=0;$i<3;$i++){ ?>
-                    <div class="slidr">
-                        <div>
-                            <h1><?= $i;?> The Kitchen:<br />the heart of the home</h1>
-                            <p>Expertly made, Exceptionally beautiful</p>
-                            <p>
-                                <a href="#">Book Your Design Consultation</a>
-                            </p>                            
+                    <div>
+                        <div class="slidr-stage">
+                            <div class="slidr">
+                                <h1>The Kitchen:<br />the <em>heart</em> of the home</h1>
+                                <p>Expertly made, Exceptionally beautiful</p>
+                                <p>
+                                    <a class="btnlink neutral" href="#">Book Your Design Consultation</a>
+                                </p>
+                            </div>
                         </div>
                     </div><?php
                 } ?>
@@ -59,7 +26,7 @@
         </div>
     </div>
     
-    <div class="content-block bon-accord-kitchens-manufacturers">
+    <div class="content-block white bon-accord-kitchens-manufacturers">
         <div class="container">
             <div class="heading-block">
                 <h2>Start your Kitchen journey</h2>
@@ -71,12 +38,12 @@
                 <li><a href=""><img src="rsc/brand_nobilia.png" alt="" title="" /></a></li>
             </ul>
             <p>
-                <a href="#">Kitchen Brands</a>
+                <a class="btnlink" href="#">Kitchen Brands</a>
             </p>
         </div>
     </div>
 
-    <div class="content-block bon-accord-kitchens-styles">
+    <div class="content-block dark bon-accord-kitchens-styles">
         <div class="container">
             <div class="heading-block">
                 <h2>Kitchen styles to suit every home</h2>
@@ -84,12 +51,12 @@
                     Each Bon Accord Kitchen is meticulously designed to establish the kitchen as the heart of your home.<br/>
                     Offering a variety of ranges, including modern, shaker, and traditional, each design is tailored to<br/>
                     complement any property while ensuring optimal spaciousness, elegance, and functionality.
-                </p>            
+                </p>
             </div>
             <?php
             for($i=0;$i<4;$i++){ ?>
                 <article class="feature-block">
-                    <div class="feature-photo" style="background-image:url(rsc/Ashbourne-gallery-8.png)">
+                    <div class="feature-photo" style="background-image:url(rsc/Ashbourne-gallery-8.jpg)">
                         <img src="rsc/" alt="" title="" />
                     </div>
                     <div class="feature-content">
@@ -98,7 +65,7 @@
                             Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodit. Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodi cumquat ugia volum sumquodit.
                         </p>
                         <p>
-                            <a href="#">Explore Classic</a>
+                            <a class="btnlink outline blue" href="#">Explore Classic</a>
                         </p>
                     </div>
                 </article><?php
@@ -107,10 +74,10 @@
         </div>
     </div>
 
-    <div class="content-block why-choose-bon-accord-kitchens">
+    <div class="content-block white why-choose-bon-accord-kitchens">
         <div class="container">
             <div class="feature-block">
-                <div class="feature-photo" style="background-image:url(rsc/Riva889_MP_14799_20.png)">
+                <div class="feature-photo" style="background-image:url(rsc/Riva889_MP_14799_20.jpg)">
                 </div>
                 <div class="feature-content">
                     <h2>Why Choose <br /> Bon Accord Kitchens?</h2>
@@ -118,14 +85,14 @@
                         Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodit. Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodi cumquat ugia volum sumquodit.
                     </p>
                     <p>
-                        <a href="#">Read Reviews</a>
+                        <a class="btnlink outline blue" href="#">Read Reviews</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="content-block bon-accord-kitchens-collection-brochure">
+    <div class="content-block neutral bon-accord-kitchens-collection-brochure">
         <div class="container">
             <div class="feature-block">
                 <div class="feature-content">
@@ -134,56 +101,31 @@
                         Kitchen inspiration at your fingertips! Discover our full choice of kitchen designs and on-trend colour options to personalise your kitchen. Our latest brochure is a useful springboard for any project.
                     </p>
                     <p>
-                        <a href="#">Request a Brochure</a>
+                        <a class="btnlink" href="#">Request a Brochure</a>
                     </p>
                 </div>
-            </div>
-            <div class="feature-photo" style="background-image:url(rsc/BAK_Brochure_Cover_Mockup_Full.png)">
-            </div>
-        </div>
-
-    </div>
-
-    <div class="content-block bon-accord-kitchens-luxury-fitted">
-        <div class="container">
-            <div class="feature-block extended">
-                <div class="feature-photo" style="background-image:url(rsc/Lumina-Kitchen-Gallery-5)"></div>
-                <div class="feature-content">
-                    <h2>Browse our Luxury <br /> Fitted Kitchens</h2>
-                    <p>
-                        Our kitchen styles range from traditional shaker kitchen designs to cutting edge handleless kitchens.<br/>
-                        Choose from homely matt kitchens, sleek gloss kitchen finishes or charming traditional wood kitchens.
-                    </p>
-                    <p>
-                        <a href="#">Explore Collections</a>
-                    </p>
+                <div class="feature-photo" style="background-image:url(rsc/BAK_Brochure_Cover_Mockup_Full.jpg)">
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 
-
-    <div class="content-block contact">
-        <div class="container">
-            <div class="block-details">
-                <div class="heading-block">
-                    <h2>Speak to our team</h2>
-                    <p>
-                        Would you like to discuss your Kitchen plans with us today?<br />
-                        Our friendly team will be pleased to help with any questions you may have.<br />
-                        Give us a call on
-                    </p>
-                </div>
+    <div class="content-block dark bon-accord-kitchens-luxury-fitted extended">
+        <div class="feature-block">
+            <div class="feature-photo" style="background-image:url(rsc/Lumina-Kitchen-Gallery-5.jpg)"></div>
+            <div class="feature-content">
+                <h2>Browse our Luxury <br /> Fitted Kitchens</h2>
                 <p>
-                    <a href="tel:01224980221">01224 980221</a>
+                    Our kitchen styles range from traditional shaker kitchen designs to cutting edge handleless kitchens.<br/>
+                    Choose from homely matt kitchens, sleek gloss kitchen finishes or charming traditional wood kitchens.
                 </p>
-            </div>            
+                <p>
+                    <a class="btnlink outline neutral" href="#">Explore Collections</a>
+                </p>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    
-    <script type="text/javascript" src="js/core.js"></script>
-</body>
 
-</html>
+<?php
+include("footer.php");
+?>
