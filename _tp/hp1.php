@@ -64,7 +64,7 @@ include("header.php");
                         <p>
                             Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodit. Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodi cumquat ugia volum sumquodit.
                         </p>
-                        <p>
+                        <p class="cta">
                             <a class="btnlink outline blue" href="#">Explore Classic</a>
                         </p>
                     </div>
@@ -77,14 +77,14 @@ include("header.php");
     <div class="content-block white why-choose-bon-accord-kitchens">
         <div class="container">
             <div class="feature-block">
-                <div class="feature-photo" style="background-image:url(rsc/Riva889_MP_14799_20.jpg)">
+                <div class="feature-photo roundr" style="background-image:url(rsc/Riva889_MP_14799_20.jpg)">
                 </div>
-                <div class="feature-content">
+                <div class="feature-content paddr">
                     <h2>Why Choose <br /> Bon Accord Kitchens?</h2>
                     <p>
                         Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodit. Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodi cumquat ugia volum sumquodit.
                     </p>
-                    <p>
+                    <p cl>
                         <a class="btnlink outline blue" href="#">Read Reviews</a>
                     </p>
                 </div>
@@ -95,7 +95,7 @@ include("header.php");
     <div class="content-block neutral bon-accord-kitchens-collection-brochure">
         <div class="container">
             <div class="feature-block">
-                <div class="feature-content">
+                <div class="feature-content paddr">
                     <h2>View our Kitchen <br /> Collection Brochure</h2>
                     <p>
                         Kitchen inspiration at your fingertips! Discover our full choice of kitchen designs and on-trend colour options to personalise your kitchen. Our latest brochure is a useful springboard for any project.
@@ -104,7 +104,7 @@ include("header.php");
                         <a class="btnlink" href="#">Request a Brochure</a>
                     </p>
                 </div>
-                <div class="feature-photo" style="background-image:url(rsc/BAK_Brochure_Cover_Mockup_Full.jpg)">
+                <div class="feature-photo roundr" style="background-image:url(rsc/BAK_Brochure_Cover_Mockup_Full.jpg)">
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@ include("header.php");
     <div class="content-block dark bon-accord-kitchens-luxury-fitted extended">
         <div class="feature-block">
             <div class="feature-photo" style="background-image:url(rsc/Lumina-Kitchen-Gallery-5.jpg)"></div>
-            <div class="feature-content">
+            <div class="feature-content paddr">
                 <h2>Browse our Luxury <br /> Fitted Kitchens</h2>
                 <p>
                     Our kitchen styles range from traditional shaker kitchen designs to cutting edge handleless kitchens.<br/>

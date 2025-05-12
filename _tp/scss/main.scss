@@ -13,11 +13,21 @@ h1,h2,h3,h4,h5,h6{
     font-family: MinionPro;
     font-weight: lighter;
 }
-
+h2{font-size:3rem; margin-bottom:2rem;}
+h3{font-size:2rem; margin-bottom:2rem;}
+p{line-height:1.5rem; margin-bottom:4rem;}
+p.cta{
+    margin-bottom:0;
+    padding-bottom:0;
+    &.call a{
+        font-family: GothamHTFMedium;
+        font-size: 2rem;
+    }
+}
 .btnlink{
     font-family: GothamHTFBook;
     text-transform: uppercase;
-    padding: 20px 35px;
+    padding: 15px 35px;
     color: $col_white;
     background-color: $col_dark !important;
     border: 1px solid $col_dark !important;
@@ -54,12 +64,23 @@ h1,h2,h3,h4,h5,h6{
 .content-block{
     padding: 80px 0;
     text-align: center;
+    &.extended{
+        padding: 0;
+        .feature-block{
+            padding: 0;
+            margin:0;
+        }
+        .feature-photo{
+            height: 700px;
+        }
+    }
     ul{
         display: flex;
         align-items: center;
         justify-content: space-around;
         list-style: none;
         list-style-type: none;
+        margin-bottom: 5rem;
         li{
             a{
                 width: auto;
@@ -94,6 +115,24 @@ h1,h2,h3,h4,h5,h6{
     
 }
 
+.arrows-right{
+    padding: 0 5%;
+    .slick-arrow{
+        right: 0;
+        position: absolute;
+        top: 40%;
+        z-index: 5;
+        border: 1px solid $col_lgrey;
+        color: $col_lgrey;
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+        &.l{
+            right: 60px;
+        }
+    }
+}
 .feature-block{
     display: flex;
     justify-content: center;
@@ -103,21 +142,29 @@ h1,h2,h3,h4,h5,h6{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 650px;
+        height: 550px;
+        &.roundr{
+            border-radius:2rem;
+        }
     }
     .feature-content{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         text-align: left;
+        &.paddr{
+            padding: 0 10%;
+        }
     }
     .feature-photo,.feature-content{
         width: 50%;
     }
 }
 
+
 .bon-accord-kitchens-styles{
     .feature-block{
+        margin: 50px 10%;
         background-color: $col_white;
         color: $col_dark;
         .feature-content{
@@ -141,11 +188,69 @@ h1,h2,h3,h4,h5,h6{
     }
     .classic-gallery-block{
         color: $font_black;
-        background-color: $col_white;
+        .slick-list{
+            background-color: $col_white;
+        }
         .classic-gallery-revolver{
             .photo-slide{
                 height: 600px
             }
+            .classic-gallery-content{
+                .classic-gallery-content-block{
+                    li{
+                        text-align: left;
+                        &.active{
+                            color: $col_lgrey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bon-accord-heather-classic-kitchen{
+    .feature-block{
+        .feature-content{
+            h2{
+                color: $col_neutral
+            }
+        }
+        .feature-photo{
+            text-align: right;
+            .feature-photo-inset{
+                width: 250px;
+                height: 250px;
+                border-radius: 125px;
+                overflow: hidden;
+                border: 3px solid white;
+                margin-top: -40px;
+                margin-right: -40px;
+            }
+        }
+    }
+}
+.testimonials-revolver{
+    .testimonial-block{
+        padding: 30px;
+        .testimonial-quote{
+            filter: drop-shadow(5px 16px 12px #ccc);
+            background-color: $col_white;
+            border-radius: 15px;
+            padding: 50px;
+            text-align: left;
+            p{
+                &.rating{
+                    color: $col_neutral;
+                }
+            }
+        }
+    }
+}
+.contact{
+    p{
+        margin-bottom: 2rem;
+        &.cta.call{
+            margin-bottom:0;
         }
     }
 }

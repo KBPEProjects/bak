@@ -10,7 +10,7 @@
                         Give us a call on
                     </p>
                 </div>
-                <p>
+                <p class="cta call">
                     <a href="tel:01224980221">01224 980221</a>
                 </p>
             </div>

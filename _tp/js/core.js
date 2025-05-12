@@ -11,8 +11,8 @@ jQuery(document).ready(function(){
             slidesToScroll:1,
             autoplaySpeed:3000,
             cssEase: 'linear',
-            prevArrow:'<i class="fa-solid fa-circle-chevron-left"></i>',
-            nextArrow:'<i class="fa-solid fa-circle-chevron-right"></i>'
+            prevArrow:'<i class="fa-solid fa-chevron-left l"></i>',
+            nextArrow:'<i class="fa-solid fa-chevron-right r"></i>',
         });
     }
     if(jQuery('.testimonials-revolver').length > 0){
@@ -25,8 +25,8 @@ jQuery(document).ready(function(){
             slidesToScroll:2,
             autoplaySpeed:3000,
             cssEase: 'linear',
-            prevArrow:'<i class="fa-solid fa-circle-chevron-left"></i>',
-            nextArrow:'<i class="fa-solid fa-circle-chevron-right"></i>',
+            prevArrow:'<i class="fa-solid fa-chevron-left l"></i>',
+            nextArrow:'<i class="fa-solid fa-chevron-right r"></i>',
             responsive: [
                 { breakpoint:1400,settings:{slidesToShow:4,slidesToScroll:3} },
                 { breakpoint:1200,settings:{slidesToShow:3,slidesToScroll:2} },

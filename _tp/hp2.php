@@ -7,9 +7,9 @@ include("header.php");
     <div class="splash-block" style="background-image:url(rsc/Carnegie-stone-grey-heritage-grey-Gallery-1.jpg)">
         <div class="bgblack">
             <div class="container">
-                <div class="splash-revolver">
+                <div class="splash-revolver arrows-right">
                     <div>
-                        <div class="slidr-stage">
+                        <div class="slidr-stage shortr">
                             <div class="slidr lef">
                 <h1>Classic Kitchen <br/>Collection</h1>
                 <p>Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodit. Atur sim rerum list fugia volum</p>
@@ -86,24 +86,28 @@ include("header.php");
                 </p>
             </div>
             <div class="classic-gallery-block">
-                <div class="classic-gallery-revolver">
-                <?php for($i=0;$i<5;$i++){ ?>
-                    <div><div class="photo-slide" style="background-image:url(rsc/Ashbourne-gallery-2.jpg)"></div></div>
-                <?php } ?>
-                </div>
-                <div class="classic-gallery-content">
-                    <div class="classic-gallery-content-block">
-                        <h3>Kitchen Range</h3>
-                        <p>Ashbourne Classic Kitchen <br />Painted Solid Ash</p>
-                    </div>
-                    <div class="classic-gallery-content-block">
-                        <h3>Colour</h3>
-                        <p>Stone Worktops<br />Heritage Grey Doors</p>
-                    </div>
-                    <div class="classic-gallery-content-block">
-                        <h3>Kitchen Range</h3>
-                        <p>Add feature if all<br />available and suitable</p>
-                    </div>
+                <div class="classic-gallery-revolver arrows-right">
+                    <?php 
+                    $slides= [
+                        ["Kitchen Range","Ashbourne Classic Kitchen <br />Painted Solid Ash","rsc/Ashbourne-gallery-2.jpg"],
+                        ["Colour","Stone Worktops<br />Heritage Grey Doors","rsc/Ashbourne-gallery-7.jpg"],
+                        ["Features","Add feature if all<br />available and suitable","rsc/Ashbourne-gallery-8.jpg"]
+                    ];
+                    foreach($slides as $i => $d){ ?>
+                        <div>
+                            <div class="photo-slide" style="background-image:url(<?= $d[2];?>)"></div>
+                            <div class="classic-gallery-content">
+                                <ul class="classic-gallery-content-block">
+                                    <?php foreach($slides as $si => $sd){ ?>
+                                    <li class="<?= ($i==$si ? "active":"");?>">
+                                        <h3><?= $sd[0];?></h3>
+                                        <p><?= $sd[1];?></p>
+                                    </li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -176,7 +180,7 @@ include("header.php");
 
 
 
-    <div class="content-block dark bon-accord-kitchens-luxury-fitted">
+    <div class="content-block dark bon-accord-heather-classic-kitchen">
         <div class="container">
             <div class="feature-block">
                 <div class="feature-content">
@@ -190,8 +194,7 @@ include("header.php");
                     </p>
                 </div>
                 <div class="feature-photo" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8.jpg)">
-                    <div class="feature-photo-inset" style="background-image:url(rsc/Brazen-Magnet-Milford-28.jpg)">
-                    </div>
+                    <img class="feature-photo-inset" style="background-image:url(rsc/Brazen-Magnet-Milford-28.webp)" alt="" title="" />
                 </div>
             </div>
         </div>
@@ -209,12 +212,18 @@ include("header.php");
                 <h2>Why customers love Bon Accord</h2>
                 <p>Don't just take our word for it! Read the latest Bon Accord Kitchen reviews, according to our customers...</p>
             </div>
-            <div class="testimonials-revolver">
-            <?php for($i=0;$i<6;$i++){ ?>
+            <div class="testimonials-revolver arrows-right">
+                <?php for($i=0;$i<6;$i++){ ?>
                 <div class="testimonial-block">
                     <div class="testimonial-quote">
                         <h3>“Top-notch service”</h3>
-                        <p class="rating"></p>
+                        <p class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
                         <p class="quote">
                             “I'm thrilled with my new kitchen
                             from Bon Accord Kitchens! The team
@@ -227,7 +236,7 @@ include("header.php");
                         <h4>Mrs Duncan</h4>
                     </div>
                 </div>
-            <?php } ?>
+                <?php } ?>
             </div>
         </div>
     </div>

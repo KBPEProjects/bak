@@ -18,7 +18,7 @@ header{
             .logo{
                 a{
                     display: block;
-                    padding: 50px 80px;
+                    padding: 40px 60px;
                     background-color: $col_white;
                     img{
                         height: 50px;
@@ -26,6 +26,8 @@ header{
                 }
             }
             nav{
+                flex:1;
+                padding: 0 2%;
                 ul{
                     display: flex;
                     align-items: center;
@@ -33,6 +35,7 @@ header{
                     list-style: none;
                     list-style-type: none;
                     li{
+                        margin-right: 3%;
                         a{
                             padding-bottom: 8px;
                         }
@@ -51,12 +54,16 @@ header{
                     }
                 }
             }
+            .call{
+                margin-right: 2%;
+                font-family: GothamHTFMedium;
+            }
         }
     }
 }
 
 .splash-block{
-    background-position: center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     .bgblack{
@@ -75,9 +82,12 @@ header{
             }
             .slidr-stage{
                 display: flex;
-                height: 900px;
                 justify-content: center;
                 align-items: center;
+                height: 900px;
+                &.shortr{
+                    height: 1000px;
+                }
                 /*align-items: center;
                 justify-content: center;*/
                 .slidr{
@@ -86,11 +96,12 @@ header{
                     width:100%;
                     h1{
                         font-family: MinionPro;
-                        font-size: 92px;
+                        font-size: 5rem;
                     }
                     p{
-                        font-family: GothamHTFMedium;
-                        font-size: 22px;
+                        font-family: GothamHTFBook;
+                        font-size: 1.25rem;
+                        margin-bottom: 1rem;
                         a{
                             margin-top:22px;
                         }
