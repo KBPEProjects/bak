@@ -94,45 +94,60 @@ h1,h2,h3,h4,h5,h6{
     
 }
 
-    .feature-block{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 50px 0;
-        .feature-photo{
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 650px;
-        }
-        .feature-content{
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            text-align: left;
-        }
-        .feature-photo,.feature-content{
-            width: 50%;
-        }
+.feature-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    .feature-photo{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 650px;
     }
+    .feature-content{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: left;
+    }
+    .feature-photo,.feature-content{
+        width: 50%;
+    }
+}
 
-    .bon-accord-kitchens-styles{
-        .feature-block{
-            background-color: $col_white;
-            color: $col_dark;
-            .feature-content{
-                padding: 70px;
-                align-self: flex-end;
+.bon-accord-kitchens-styles{
+    .feature-block{
+        background-color: $col_white;
+        color: $col_dark;
+        .feature-content{
+            padding: 70px;
+            align-self: flex-end;
+        }
+    }
+}
+.bon-accord-kitchens-luxury-fitted{
+    .feature-block{
+        .feature-content{
+            h2{
+                color: $col_neutral
             }
         }
     }
-    .bon-accord-kitchens-luxury-fitted{
-        .feature-block{
-            .feature-content{
-                h2{
-                    color: $col_neutral
-                }
+}
+.classic-gallery{
+    h2{
+        color: $col_neutral;
+    }
+    .classic-gallery-block{
+        color: $font_black;
+        background-color: $col_white;
+        .classic-gallery-revolver{
+            .photo-slide{
+                height: 600px
             }
         }
     }
+}
+
 @import "_header";

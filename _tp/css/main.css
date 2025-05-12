@@ -160,6 +160,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #CCC1A7;
 }
 
+.classic-gallery h2 {
+  color: #CCC1A7;
+}
+.classic-gallery .classic-gallery-block {
+  color: #201f24;
+  background-color: #FFFFFF;
+}
+.classic-gallery .classic-gallery-block .classic-gallery-revolver .photo-slide {
+  height: 600px;
+}
+
 .container {
   padding: 0 5%;
 }

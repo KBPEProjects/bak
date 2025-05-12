@@ -87,10 +87,9 @@ include("header.php");
             </div>
             <div class="classic-gallery-block">
                 <div class="classic-gallery-revolver">
-                    <?php for($i=0;$i<5;$i++){ ?>
-                        <div><div class="photo-slide" style="background-image:url(rsc/Ashbourne-gallery-2.jpg)"></div></div>
-                        <?php
-                    } ?>
+                <?php for($i=0;$i<5;$i++){ ?>
+                    <div><div class="photo-slide" style="background-image:url(rsc/Ashbourne-gallery-2.jpg)"></div></div>
+                <?php } ?>
                 </div>
                 <div class="classic-gallery-content">
                     <div class="classic-gallery-content-block">
@@ -177,7 +176,7 @@ include("header.php");
 
 
 
-    <div class="content-block dark bon-accord-kitchens-collection-brochure">
+    <div class="content-block dark bon-accord-kitchens-luxury-fitted">
         <div class="container">
             <div class="feature-block">
                 <div class="feature-content">

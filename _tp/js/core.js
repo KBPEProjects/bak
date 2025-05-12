@@ -1,5 +1,20 @@
 jQuery(document).ready(function(){
-    
+
+    if(jQuery('.classic-gallery-revolver').length > 0){
+        jQuery('.classic-gallery-revolver').slick({
+            fade: true,
+            dots: false,
+            arrows: true,
+            infinite: true,
+            autoplay: true,
+            slidesToShow:1,
+            slidesToScroll:1,
+            autoplaySpeed:3000,
+            cssEase: 'linear',
+            prevArrow:'<i class="fa-solid fa-circle-chevron-left"></i>',
+            nextArrow:'<i class="fa-solid fa-circle-chevron-right"></i>'
+        });
+    }
     if(jQuery('.testimonials-revolver').length > 0){
         jQuery('.testimonials-revolver').slick({
             dots: false,
