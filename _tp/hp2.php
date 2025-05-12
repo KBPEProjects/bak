@@ -138,7 +138,7 @@ include("header.php");
         <div class="container">
             <div class="heading-block">
                 <h2>Next Steps</h2>
-                <p>Discover the full range of Kitchens, styles, colours and features by exploring our state of the art showroom or booking a <a href="#">Free Design Appointment.</a></p>
+                <p>Discover the full range of Kitchens, styles, colours and features by exploring our<br /> state of the art showroom or booking a <a href="#">Free Design Appointment.</a></p>
             </div>
         </div>
     </div>
@@ -148,9 +148,9 @@ include("header.php");
             <ul class="vert">
                 <li>
                     <div class="feature-block">
-                        <div class="feature-photo">
-                        </div>
+                        <div class="feature-photo svg">
                             <img src="rsc/Bon Accord Kitchens_Showroom.svg" alt="" title="" />
+                        </div>
                         <div class="feature-content">
                             <h3>Visit Aberdeen Showroom</h3>
                             <p>Be inspired! Explore the full range of stunning Kitchen collections, workstops, colours and finishes in person</p>
@@ -160,9 +160,9 @@ include("header.php");
                 </li>
                 <li>
                     <div class="feature-block">
-                        <div class="feature-photo">
-                        </div>
+                        <div class="feature-photo svg">
                             <img src="rsc/Bon Accord Kitchens_Design Appointment.svg" alt="" title="" />
+                        </div>
                         <div class="feature-content">
                             <h3>Free Design Appointment</h3>
                             <p>See your new Kitchen come to life from the comfort of your own home with one of our friendly Kitchen designer.</p>
@@ -212,7 +212,7 @@ include("header.php");
                 <h2>Why customers love Bon Accord</h2>
                 <p>Don't just take our word for it! Read the latest Bon Accord Kitchen reviews, according to our customers...</p>
             </div>
-            <div class="testimonials-revolver arrows-right">
+            <div class="testimonials-revolver arrows-right darkarrows">
                 <?php for($i=0;$i<6;$i++){ ?>
                 <div class="testimonial-block">
                     <div class="testimonial-quote">

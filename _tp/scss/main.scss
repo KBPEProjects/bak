@@ -24,7 +24,7 @@ p.cta{
         font-size: 2rem;
     }
 }
-.bgblack{ background-color: rgba(0,0,0,0.3);}
+.bgblack{ background-color: rgba(0,0,0,0.5);}
 .btnlink{
     font-family: GothamHTFBook;
     text-transform: uppercase;
@@ -113,24 +113,35 @@ p.cta{
             text-decoration: none;
         }
     }
-    
+    .heading-block{
+        padding: 0 15%;
+    }
 }
 .arrows-right{
-    padding: 0 5%;
+    padding: 0 10%;
     .slick-arrow{
-        right: 0;
+        cursor: pointer;
+        right: 2rem;
         position: absolute;
-        top: 40%;
+        top: 50%;
         z-index: 5;
-        border: 1px solid $col_lgrey;
-        color: $col_lgrey;
+        border: 1px solid #f3f2f2;
+        color: #f3f2f2;
         border-radius: 20px;
-        width: 40px;
-        height: 40px;
-        font-size: 2rem;
+        width: auto;
+        font-size: 1.25rem;
+        padding: 8px 12px;
+        opacity: 0.5;
         &.l{
-            right: 60px;
+            right: 5rem;
         }
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &.darkarrows .slick-arrow{
+        color:#aaa;
+        border-color: #aaa;
     }
 }
 .feature-block{
@@ -269,8 +280,10 @@ p.cta{
 /*HOMEPAGE 2*/
 .vert{ 
     margin-bottom:0 !important;
+    padding: 0 7%;
     li{
         width:100%;
+        padding: 0 2%;
         .feature-block{
             display: flex;
             align-items: center;
@@ -280,13 +293,30 @@ p.cta{
                 text-align: left;
                 padding: 2rem;
                 height: 400px;
+                margin-bottom: 2em;
                 i{
                     font-size: 3rem;
                     color: $col_white;
                 }
+                &.svg{
+                    text-align: center;
+                    height: unset;
+                    padding: 0;
+                    img{
+                        width:200px;
+                        height:200px;
+                        margin: 0 auto;
+                    }
+                }
             }
             .feature-content{
                 text-align: center;
+                h3{
+                    margin-bottom: 1rem;
+                }
+                p{
+                    margin-bottom:2rem
+                }
             }
             .feature-photo, .feature-content{
                 width:100%;
@@ -301,6 +331,8 @@ p.cta{
     padding-bottom: 2rem;
     border-bottom: 1px solid $col_dark
 }
-
+.bon-accord-kitchens-next-steps p{
+    margin-bottom: 0;
+}
 
 @import "_header";

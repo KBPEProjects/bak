@@ -61,7 +61,7 @@ p.cta.call a {
 }
 
 .bgblack {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .btnlink {
@@ -156,24 +156,36 @@ p.cta.call a {
   color: #FFFFFF;
   text-decoration: none;
 }
+.content-block .heading-block {
+  padding: 0 15%;
+}
 
 .arrows-right {
-  padding: 0 5%;
+  padding: 0 10%;
 }
 .arrows-right .slick-arrow {
-  right: 0;
+  cursor: pointer;
+  right: 2rem;
   position: absolute;
-  top: 40%;
+  top: 50%;
   z-index: 5;
-  border: 1px solid #F3F2F2;
-  color: #F3F2F2;
+  border: 1px solid #f3f2f2;
+  color: #f3f2f2;
   border-radius: 20px;
-  width: 40px;
-  height: 40px;
-  font-size: 2rem;
+  width: auto;
+  font-size: 1.25rem;
+  padding: 8px 12px;
+  opacity: 0.5;
 }
 .arrows-right .slick-arrow.l {
-  right: 60px;
+  right: 5rem;
+}
+.arrows-right .slick-arrow:hover {
+  opacity: 1;
+}
+.arrows-right.darkarrows .slick-arrow {
+  color: #aaa;
+  border-color: #aaa;
 }
 
 .feature-block {
@@ -303,9 +315,11 @@ p.cta.call a {
 /*HOMEPAGE 2*/
 .vert {
   margin-bottom: 0 !important;
+  padding: 0 7%;
 }
 .vert li {
   width: 100%;
+  padding: 0 2%;
 }
 .vert li .feature-block {
   display: -webkit-box;
@@ -324,13 +338,30 @@ p.cta.call a {
   text-align: left;
   padding: 2rem;
   height: 400px;
+  margin-bottom: 2em;
 }
 .vert li .feature-block .feature-photo i {
   font-size: 3rem;
   color: #FFFFFF;
 }
+.vert li .feature-block .feature-photo.svg {
+  text-align: center;
+  height: unset;
+  padding: 0;
+}
+.vert li .feature-block .feature-photo.svg img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
 .vert li .feature-block .feature-content {
   text-align: center;
+}
+.vert li .feature-block .feature-content h3 {
+  margin-bottom: 1rem;
+}
+.vert li .feature-block .feature-content p {
+  margin-bottom: 2rem;
 }
 .vert li .feature-block .feature-photo, .vert li .feature-block .feature-content {
   width: 100%;
@@ -343,6 +374,10 @@ p.cta.call a {
 .bon-accord-classic-kitchen-favourites .vert .feature-block .feature-content.lined p {
   padding-bottom: 2rem;
   border-bottom: 1px solid #2F2A2C;
+}
+
+.bon-accord-kitchens-next-steps p {
+  margin-bottom: 0;
 }
 
 .container {
@@ -429,14 +464,19 @@ header .container .nav-wrapper .call {
 }
 .splash-block .bgblack .splash-revolver .slick-arrow {
   top: 40%;
+  cursor: pointer;
   padding: 5%;
   z-index: 5;
   color: rgba(255, 255, 255, 0.5);
   font-size: 40px;
   position: absolute;
+  opacity: 0.5;
 }
 .splash-block .bgblack .splash-revolver .slick-arrow.r {
   right: 0;
+}
+.splash-block .bgblack .splash-revolver .slick-arrow:hover {
+  opacity: 1;
 }
 .splash-block .bgblack .splash-revolver .slidr-stage {
   display: -webkit-box;
