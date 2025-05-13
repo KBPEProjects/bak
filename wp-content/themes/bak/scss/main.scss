@@ -1,0 +1,364 @@
+@import "_var";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: GothamHTFBook;
+    font-size: 16px;
+    background-color: $col_dark;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: MinionPro;
+    font-weight: lighter;
+}
+h2{font-size:3rem; margin-bottom:2rem;}
+h3{font-size:2rem; margin-bottom:2rem;}
+p{line-height:1.5rem; margin-bottom:4rem;}
+p.cta{
+    margin-bottom:0;
+    padding-bottom:0;
+    &.call a{
+        font-family: GothamHTFMedium;
+        font-size: 2rem;
+    }
+}
+.bgblack{ background-color: rgba(0,0,0,0.5);}
+.btnlink{
+    cursor: pointer;
+    font-family: GothamHTFBook;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    color: $col_white;
+    background-color: $col_dark !important;
+    border: 1px solid $col_dark !important;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    &.neutral{
+        color: $col_dark !important;
+        background-color: $col_neutral !important;
+        border-color: $col_neutral !important;
+    }
+    &.outline{
+	    transition: all 0.5s;
+        background-color: transparent !important;
+        &.blue{
+            border-color: $col_core_blue !important;
+            color: $col_core_blue !important;
+            &:hover{
+	            transition: all 0.5s;
+                color: $col_white !important;
+                background-color: $col_core_blue !important;
+            }
+        }
+        &.neutral{
+            border-color: $col_neutral !important;
+            color: $col_neutral !important;
+            &:hover{
+	            transition: all 0.5s;
+                color: $col_dark !important;
+                background-color: $col_neutral !important;
+            }
+        }
+    }/**/
+}
+
+
+.content-block{
+    padding: 80px 0;
+    text-align: center;
+    &.extended{
+        padding: 0;
+        .feature-block{
+            padding: 0;
+            margin:0;
+        }
+        .feature-photo{
+            height: 700px;
+        }
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        list-style-type: none;
+        margin-bottom: 5rem;
+        li{
+            a{
+                width: auto;
+                img{
+                    width: 280px;
+                    height: auto;
+                }
+            } 
+        }
+    }
+    &.dark{
+        color: $col_white;
+        background-color: $col_dark
+    }
+    &.white{
+        background-color: $col_white
+    }
+    &.lgrey{
+        background-color: $col_lgrey
+    }
+    &.neutral{
+        background-color: $col_neutral
+    }
+    &.coreblue{
+        color: $col_white;
+        background-color: $col_core_blue;
+        a{
+            color: $col_white;
+            text-decoration: none;
+        }
+        &.contact{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("../../rsc/hp1_owl_contact.png");
+        }
+
+    }
+    .heading-block{
+        padding: 0 15%;
+    }
+}
+.arrows-right{
+    padding: 0 10% ;
+    .slick-arrow{
+        cursor: pointer;
+        right: 2rem;
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        border: 1px solid #f3f2f2;
+        color: #f3f2f2;
+        border-radius: 20px;
+        width: auto;
+        font-size: 1.25rem;
+        padding: 8px 12px;
+        opacity: 0.5;
+	    transition: all 0.5s;
+        &.l{
+            right: 5rem;
+        }
+        &:hover{
+	        transition: all 0.5s;
+            opacity: 1;
+        }
+    }
+    &.darkarrows .slick-arrow{
+        color:#aaa;
+        border-color: #aaa;
+    }
+}
+.feature-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    .feature-photo{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 550px;
+        &.roundr{
+            border-radius:4rem;
+        }
+    }
+    .feature-content{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: left;
+        &.paddr{
+            padding: 0 10%;
+        }
+    }
+    .feature-photo,.feature-content{
+        width: 50%;
+    }
+}
+
+.bon-accord-kitchens-styles{
+    .feature-block{
+        margin: 50px 10%;
+        background-color: $col_white;
+        color: $col_dark;
+        .feature-content{
+            padding: 4rem;
+            align-self: flex-end;
+        }
+    }
+}
+.bon-accord-kitchens-luxury-fitted{
+    .feature-block{
+        .feature-content{
+            h2{
+                color: $col_neutral
+            }
+        }
+    }
+}
+.classic-gallery{
+    h2{
+        color: $col_neutral;
+    }
+    .classic-gallery-block{
+        color: $font_black;
+        .slick-list{
+            background-color: $col_white;
+        }
+        .classic-gallery-revolver{
+            .photo-slide{
+                height: 600px
+            }
+            .classic-gallery-content{
+                padding: 2rem 0;
+                .classic-gallery-content-block{
+                    margin-bottom:0;
+                    justify-content:unset;
+                    li{
+                        padding: 0 2rem;
+                        border-right:1px solid $col_dark;
+                        text-align: left;
+                        &.active{
+                            color: #aaa;
+                        }
+                        h3,p{
+                            margin-bottom: 0;
+                        }
+                        &:last-child{
+                            border-right:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bon-accord-heather-classic-kitchen{
+    .feature-block{
+        .feature-content{
+            h2{
+                color: $col_neutral
+            }
+        }
+        .feature-photo{
+            text-align: right;
+            margin-right: 7%;
+            .feature-photo-inset{
+                width: 250px;
+                height: 250px;
+                border-radius: 125px;
+                overflow: hidden;
+                border: 6px solid white;
+                margin-top: -40px;
+                margin-right: -40px;
+            }
+        }
+    }
+}
+.testimonials-revolver{
+    .testimonial-block{
+        padding: 30px;
+        .testimonial-quote{
+            filter: drop-shadow(4px 4px 4px #ccc);
+            background-color: $col_white;
+            border-radius: 3rem;
+            padding: 50px;
+            text-align: left;
+            p{
+                &.rating{
+                    color: $col_neutral;
+                }
+            }
+        }
+    }
+}
+.contact{
+    p{
+        margin-bottom: 2rem;
+        &.cta.call{
+            margin-bottom:0;
+        }
+    }
+}
+
+/*HOMEPAGE 2*/
+.vert{ 
+    margin-bottom:0 !important;
+    padding: 0 7%;
+    li{
+        width:100%;
+        padding: 0 2%;
+        .feature-block{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom:0;
+            .feature-photo{
+                text-align: left;
+                padding: 2rem;
+                height: 400px;
+                margin-bottom: 2em;
+                i{
+                    font-size: 3rem;
+                    color: $col_white;
+                }
+                &.svg{
+                    text-align: center;
+                    height: unset;
+                    padding: 0;
+                    img{
+                        width:200px;
+                        height:200px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .feature-content{
+                text-align: center;
+                h3{
+                    margin-bottom: 1rem;
+                }
+                p{
+                    margin-bottom:2rem
+                }
+            }
+            .feature-photo, .feature-content{
+                width:100%;
+            }
+        }
+    }
+}
+.bon-accord-classic-kitchen-favourites .vert .feature-block .feature-content p{
+    margin-bottom: 2rem;
+}
+.bon-accord-classic-kitchen-favourites .vert .feature-block .feature-content.lined p{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $col_dark
+}
+.bon-accord-kitchens-next-steps p{margin-bottom: 0;}
+.tightr{padding: 0 20%;}
+.bgowl{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    &.why-choose-bon-accord-kitchens{ background-image: url("../../rsc/hp1_owl_choose_kitchens.png"); }
+    &.bon-accord-kitchens-luxury-fitted{ background-image: url("../../rsc/hp1_owl_luxury.png"); }
+    &.contact{ background-image: url("../../rsc/hp1_owl_contact.png"); background-position: center; }
+    &.bon-accord-latest-classic-kitchens{ background-image: url("../../rsc/hp2_owl_classic_kitchens.png"); }
+    &.classic-gallery{ background-image: url("../../rsc/hp2_owl_classic_gallery.png"); }
+    &.testimonials-block{ background-image: url("../../rsc/hp2_owl_testimonial.png"); }
+}
+
+@import "_header";
+
+@import "_mobile";

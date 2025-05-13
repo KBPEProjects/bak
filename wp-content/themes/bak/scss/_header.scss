@@ -1,0 +1,147 @@
+.container{
+    padding: 0 5%;
+}
+header{
+    background-color: $col_dark;
+    z-index: 50;
+    position: fixed;
+    width:100%;
+    top:0;
+    .container{
+        padding: 0 5%;
+        .nav-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: GothamHTFBook;
+            a{
+                color: $col_white;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .mobile_bar_logobtn{
+                .logo{
+                    a{
+	                    transition: all 0.5s;
+                        display: block;
+                        padding: 40px 60px ;
+                        background-color: $col_white;
+                        img{
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+            .mobile_bar_nav{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                nav{
+                    flex:1;
+                    padding: 0 0 0 2%;
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        list-style: none;
+                        list-style-type: none;
+                        li{
+                            margin-right: 3%;
+                            a{
+                                padding-bottom: 8px;
+                                transition: all 0.5s;
+                                white-space: nowrap;
+                                &:hover{
+                                    color: $col_neutral;
+                                    transition: all 0.5s;
+                                }
+                            }
+                            &:first-child{
+                                &::marker{
+                                    content: "\f015"; /* FontAwesome Unicode */
+                                    font-family: "Font Awesome 6 Free";
+                                    color: $col_white;
+                                    font-weight: bold;
+                                }
+                                a{ margin-left:5px; }
+                            }
+                            &.current_page_item:first-child::marker{
+                                color: $col_neutral;
+                            }
+                            &.current_page_item a{
+                                color: $col_neutral;
+                                border-bottom: 1px solid $col_neutral !important;
+                            }
+                        }
+                    }
+                }
+                .call{
+                    margin-right: 2%;
+                    font-family: GothamHTFMedium;
+                }
+            }
+        }
+    }
+    &.hscrolled .nav-wrapper .logo a{
+        padding: 20px 60px !important; 
+    }
+}
+.splash-block{
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .bgblack{
+        padding-top: 113px;
+        .splash-revolver{
+            .slick-arrow{
+                top: 40%;
+                cursor: pointer;
+                padding: 5%;
+                z-index: 5;
+                color: rgba(255,255,255,0.5);
+                font-size: 40px;
+                position: absolute;
+                opacity: 0.5;
+	            transition: all 0.5s;
+                &.r{
+                    right: 0;
+                }
+                &:hover{
+	                transition: all 0.5s;
+                    opacity: 1;
+                }
+            }
+            .slidr-stage{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 900px;
+                &.shortr{
+                    height: 650px;
+                }
+                /*align-items: center;
+                justify-content: center;*/
+                .slidr{
+                    color: $col_white;
+                    text-align: center;
+                    width:100%;
+                    h1{
+                        font-family: MinionPro;
+                        font-size: 5rem;
+                    }
+                    p{
+                        font-family: GothamHTFBook;
+                        font-size: 1.25rem;
+                        margin-bottom: 1rem;
+                        a{
+                            margin-top:22px;
+                        }
+                    }
+                    &.lef{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -79,7 +79,8 @@ function menu_settings_init() {
         'menu_CTA_button_label'=>"CTA button should read: ",
         'menu_CTA_button_label_mobile'=>"(for mobile) CTA button should read: ",
         'menu_CTA_button_url'=>"Button should divert to this URL: ",
-        'footer_contact_speil'=>"Wording for the Contact footer: "
+        'footer_contact_heading'=>"(Heading) Wording for the Contact footer: ",
+        'footer_contact_speil'=>"(Para) Wording for the Contact footer: "
     ];
     foreach($fields as $id=>$label){
         register_setting('menu_settings_group', $id);
@@ -99,6 +100,7 @@ function menu_text_field_cb($args) {
     echo '<textarea type="text" name="'.$args['ID'].'">' . esc_attr($value) . '</textarea>';
 }
 
+function nl2brX($str){ return $str; }
 
 
 
@@ -113,30 +115,33 @@ function menu_text_field_cb($args) {
 
 
 
-/*
+
 add_action( 'wp_enqueue_scripts', 'fe_add_theme_scripts' );
 function fe_add_theme_scripts(){
     $ver= strval(rand(100,999));
 	// CSS...
-	wp_enqueue_style('bootstrap', "//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css",[],"5.3.2",'all' );
-	wp_enqueue_style('fancybox', "//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css",[],"3.5.7",'all' );
 	wp_enqueue_style('fontawesome', "//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css",[],"6.4.2",'all' );
 	wp_enqueue_style('slick', "//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css",[],"1.9.0",'all' ); 
-	wp_enqueue_style('header',esc_url(get_theme_file_uri('assets/css/header.css')),[],$ver,'all');
-	wp_enqueue_style('core_common',esc_url(get_theme_file_uri('assets/css/core.common.css')),[],$ver,'all');
-	wp_enqueue_style('core',get_stylesheet_uri(),[],$ver,'all' );
-	wp_enqueue_style('header_moblie',esc_url(get_theme_file_uri('assets/css/mobile.header.css')),[],$ver,'all' );
-	wp_enqueue_style('core_moblie',esc_url(get_theme_file_uri('assets/css/mobile.styles.css')),[],$ver,'all' );
-
+	wp_enqueue_style('dist', esc_url(get_theme_file_uri('dist/css/main.min.css')),[],$ver,'all' ); 
+	
 	// JS...
 	wp_enqueue_script('jquery',"//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js",[],"3.7.1",true);
-	if(is_front_page()){ wp_enqueue_script('typed',"//cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js",[],"2.1.0",true); }
-    wp_enqueue_script('fancybox',"//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js",[],"3.5.7",true);
-	wp_enqueue_script('sticky_sidebar',"//cdnjs.cloudflare.com/ajax/libs/sticky-sidebar/3.3.1/jquery.sticky-sidebar.min.js",['jquery'],"3.3.1",true);
-	wp_enqueue_script('bootstrap',"//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js",['jquery'],"5.3.2",true);
 	wp_enqueue_script('slick',"//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js",[],"1.9.0",true); 
-	wp_enqueue_script('core_common',esc_url(get_theme_file_uri('assets/js/core.common.js')),[],$ver,true);
-	wp_enqueue_script('core',get_template_directory_uri().'/core.js',[],$ver,true);
+	wp_enqueue_script('core',get_template_directory_uri().'/js/core.js',[],$ver,true);
 }
 
+/*
+wp_enqueue_style('bootstrap', "//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css",[],"5.3.2",'all' );
+wp_enqueue_style('fancybox', "//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css",[],"3.5.7",'all' );
+wp_enqueue_style('header',esc_url(get_theme_file_uri('assets/css/header.css')),[],$ver,'all');
+wp_enqueue_style('core_common',esc_url(get_theme_file_uri('assets/css/core.common.css')),[],$ver,'all');
+wp_enqueue_style('core',get_stylesheet_uri(),[],$ver,'all' );
+wp_enqueue_style('header_moblie',esc_url(get_theme_file_uri('assets/css/mobile.header.css')),[],$ver,'all' );
+wp_enqueue_style('core_moblie',esc_url(get_theme_file_uri('assets/css/mobile.styles.css')),[],$ver,'all' );
+
+if(is_front_page()){ wp_enqueue_script('typed',"//cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js",[],"2.1.0",true); }
+wp_enqueue_script('fancybox',"//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js",[],"3.5.7",true);
+wp_enqueue_script('sticky_sidebar',"//cdnjs.cloudflare.com/ajax/libs/sticky-sidebar/3.3.1/jquery.sticky-sidebar.min.js",['jquery'],"3.3.1",true);
+wp_enqueue_script('bootstrap',"//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js",['jquery'],"5.3.2",true);
+wp_enqueue_script('core_common',esc_url(get_theme_file_uri('assets/js/core.common.js')),[],$ver,true);
 */

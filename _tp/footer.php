@@ -18,7 +18,6 @@
     </div>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    
     <script type="text/javascript" src="js/core.js"></script>
 </body>
 
