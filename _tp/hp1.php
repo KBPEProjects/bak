@@ -32,7 +32,7 @@ include("header.php");
                 <h2>Start your Kitchen journey</h2>
                 <p>Discover beautifully crafted kitchens from three of the world's leading manufacturers, <br /> each offering unique styles and exclusive design features, tailored to your home and lifestyle.</p>
             </div>
-            <ul>
+            <ul class="tightr">
                 <li><a href=""><img src="rsc/brand_ballerina.png" alt="" title="" /></a></li>
                 <li><a href=""><img src="rsc/brand_masterclass.png" alt="" title="" /></a></li>
                 <li><a href=""><img src="rsc/brand_nobilia.png" alt="" title="" /></a></li>

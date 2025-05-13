@@ -41,11 +41,13 @@ p.cta{
         border-color: $col_neutral !important;
     }
     &.outline{
+	    transition: all 0.5s;
         background-color: transparent !important;
         &.blue{
             border-color: $col_core_blue !important;
             color: $col_core_blue !important;
             &:hover{
+	            transition: all 0.5s;
                 color: $col_white !important;
                 background-color: $col_core_blue !important;
             }
@@ -54,6 +56,7 @@ p.cta{
             border-color: $col_neutral !important;
             color: $col_neutral !important;
             &:hover{
+	            transition: all 0.5s;
                 color: $col_dark !important;
                 background-color: $col_neutral !important;
             }
@@ -139,10 +142,12 @@ p.cta{
         font-size: 1.25rem;
         padding: 8px 12px;
         opacity: 0.5;
+	    transition: all 0.5s;
         &.l{
             right: 5rem;
         }
         &:hover{
+	        transition: all 0.5s;
             opacity: 1;
         }
     }
@@ -338,9 +343,8 @@ p.cta{
     padding-bottom: 2rem;
     border-bottom: 1px solid $col_dark
 }
-.bon-accord-kitchens-next-steps p{
-    margin-bottom: 0;
-}
+.bon-accord-kitchens-next-steps p{margin-bottom: 0;}
+.tightr{padding: 0 20%;}
 .bgowl{
     background-repeat: no-repeat;
     background-size: contain;

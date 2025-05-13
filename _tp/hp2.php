@@ -149,7 +149,7 @@ include("header.php");
                 <li>
                     <div class="feature-block">
                         <div class="feature-photo svg">
-                            <img src="rsc/Bon Accord Kitchens_Showroom.svg" alt="" title="" />
+                            <img src="rsc/showroom-directions.png" alt="" title="" />
                         </div>
                         <div class="feature-content">
                             <h3>Visit Aberdeen Showroom</h3>
@@ -161,7 +161,7 @@ include("header.php");
                 <li>
                     <div class="feature-block">
                         <div class="feature-photo svg">
-                            <img src="rsc/Bon Accord Kitchens_Design Appointment.svg" alt="" title="" />
+                            <img src="rsc/showroom-design.png" alt="" title="" />
                         </div>
                         <div class="feature-content">
                             <h3>Free Design Appointment</h3>
@@ -241,7 +241,7 @@ include("header.php");
                 <h2>Luxury for every lifestyle</h2>
                 <p>Discover beautifully crafted kitchens from three of the world's leading manufacturers, <br /> each offering unique styles and exclusive design features, tailored to your home and lifestyle.</p>
             </div>
-            <ul>
+            <ul class="tightr">
                 <li><a href=""><img src="rsc/brand_ballerina.png" alt="" title="" /></a></li>
                 <li><a href=""><img src="rsc/brand_masterclass.png" alt="" title="" /></a></li>
                 <li><a href=""><img src="rsc/brand_nobilia.png" alt="" title="" /></a></li>

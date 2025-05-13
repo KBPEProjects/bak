@@ -80,10 +80,12 @@ header{
                 font-size: 40px;
                 position: absolute;
                 opacity: 0.5;
+	            transition: all 0.5s;
                 &.r{
                     right: 0;
                 }
                 &:hover{
+	                transition: all 0.5s;
                     opacity: 1;
                 }
             }

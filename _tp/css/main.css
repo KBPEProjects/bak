@@ -82,6 +82,8 @@ p.cta.call a {
   border-color: #CCC1A7 !important;
 }
 .btnlink.outline {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   background-color: transparent !important;
 }
 .btnlink.outline.blue {
@@ -89,6 +91,8 @@ p.cta.call a {
   color: #5a7d95 !important;
 }
 .btnlink.outline.blue:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   color: #FFFFFF !important;
   background-color: #5a7d95 !important;
 }
@@ -97,6 +101,8 @@ p.cta.call a {
   color: #CCC1A7 !important;
 }
 .btnlink.outline.neutral:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   color: #2F2A2C !important;
   background-color: #CCC1A7 !important;
 }
@@ -182,11 +188,15 @@ p.cta.call a {
   font-size: 1.25rem;
   padding: 8px 12px;
   opacity: 0.5;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .arrows-right .slick-arrow.l {
   right: 5rem;
 }
 .arrows-right .slick-arrow:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   opacity: 1;
 }
 .arrows-right.darkarrows .slick-arrow {
@@ -386,6 +396,10 @@ p.cta.call a {
   margin-bottom: 0;
 }
 
+.tightr {
+  padding: 0 20%;
+}
+
 .bgowl {
   background-repeat: no-repeat;
   background-size: contain;
@@ -505,11 +519,15 @@ header .container .nav-wrapper .call {
   font-size: 40px;
   position: absolute;
   opacity: 0.5;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .splash-block .bgblack .splash-revolver .slick-arrow.r {
   right: 0;
 }
 .splash-block .bgblack .splash-revolver .slick-arrow:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   opacity: 1;
 }
 .splash-block .bgblack .splash-revolver .slidr-stage {
