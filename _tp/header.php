@@ -14,14 +14,16 @@
 <header>
     <div class="container">
         <div class="nav-wrapper">
+            
             <div class="logo">
                 <a href="#">
                     <img src="rsc/baklogo.png" alt="BAK Logo" title="BAK Logo" />
                 </a>
             </div>
+
             <nav class="menu">
                 <ul>
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="current_page_item"><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Kitchens</a></li>
                     <li><a href="#">Home</a></li>
@@ -33,8 +35,9 @@
                 <a href="tel:01224980221">Call 01224 980221</a>
             </div>
             <div class="cta">
-                <a class="btnlink neutral" href="#">Book your Design Consultation</a>
+                <a class="btnlink neutral" href="#"><i class="fa-solid fa-pen-to-square"></i> Book your Design Consultation</a>
             </div>
+
         </div>
     </div>
 </header>

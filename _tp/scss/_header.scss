@@ -48,10 +48,10 @@ header{
                             }
                             a{ margin-left:5px; }
                         }
-                        &.active:first-child::marker{
+                        &.current_page_item:first-child::marker{
                             color: $col_neutral !important;
                         }
-                        &.active a{
+                        &.current_page_item a{
                             color: $col_neutral !important;
                             border-bottom: 1px solid $col_neutral !important;
                         }

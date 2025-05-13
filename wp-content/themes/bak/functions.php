@@ -38,6 +38,80 @@ function hide_editor() {
         remove_post_type_support('page', 'editor');
     }*/
 }
+
+add_action('admin_menu', 'add_extended_menu');
+function add_extended_menu() {
+    $parent_slug = 'themes.php';
+    add_submenu_page(
+        $parent_slug,
+        'Main Menu & Contact (extended)',
+        'Main Menu & Contact (extended)',
+        'manage_options',
+        'menu-settings',
+        'extended_menu_callback'
+    );
+}
+function extended_menu_callback() {
+    if (!current_user_can('manage_options')) {
+        return;
+    } ?>
+    <div class="wrap">
+        <form method="post" action="options.php">
+            <?php
+            settings_fields('menu_settings_group');
+            do_settings_sections('menu-settings');
+            submit_button();
+            ?>
+        </form>
+    </div><?php
+}
+// Register the setting
+add_action('admin_init', 'menu_settings_init');
+function menu_settings_init() {
+    add_settings_section(
+        'menu_settings_section',
+        'Menu Settings Section',
+        'menu_settings_section_cb', 
+        'menu-settings'
+    );
+    $fields= [
+        'menu_contact_number'=>"Main contact number is: ",
+        'menu_CTA_button_label'=>"CTA button should read: ",
+        'menu_CTA_button_url'=>"Button should divert to this URL: ",
+        'footer_contact_speil'=>"Wording for the Contact footer: "
+    ];
+    foreach($fields as $id=>$label){
+        register_setting('menu_settings_group', $id);
+        add_settings_field(
+            $id,
+            $label,
+            'menu_text_field_cb',
+            'menu-settings',
+            'menu_settings_section',
+            ['ID'=>$id,"label"=>$label]
+        );
+    }
+}
+function menu_settings_section_cb() { echo '<p>Customise the menu and contact settings below:</p>';}
+function menu_text_field_cb($args) {
+    $value = get_option($args['ID'], '');
+    echo '<textarea type="text" name="'.$args['ID'].'">' . esc_attr($value) . '</textarea>';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 add_action( 'wp_enqueue_scripts', 'fe_add_theme_scripts' );
 function fe_add_theme_scripts(){

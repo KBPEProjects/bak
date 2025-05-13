@@ -493,10 +493,10 @@ header .container .nav-wrapper nav ul li:first-child::marker {
 header .container .nav-wrapper nav ul li:first-child a {
   margin-left: 5px;
 }
-header .container .nav-wrapper nav ul li.active:first-child::marker {
+header .container .nav-wrapper nav ul li.current_page_item:first-child::marker {
   color: #CCC1A7 !important;
 }
-header .container .nav-wrapper nav ul li.active a {
+header .container .nav-wrapper nav ul li.current_page_item a {
   color: #CCC1A7 !important;
   border-bottom: 1px solid #CCC1A7 !important;
 }
