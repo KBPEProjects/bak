@@ -591,36 +591,6 @@ header .container .nav-wrapper .mobile_bar_nav .call {
   text-align: left;
 }
 
-/*
-header{
-    .container{
-        .nav-wrapper{
-            .mobile_bar_nav{
-                .cta{
-                    a{
-                        .mob{
-                            @media (min-width:767px) { 
-                                display: none !important
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
- SPECIFIC FIXES...*/
-/*
-@media (min-width:767px) {  APPLY TO ALL SCREENS LARGER THAN 767 
-    .mob_hide_dskp{ display: none !important}
-}
-header .nav-wrapper .mobile_bar_nav .cta a .mob{}
-header .nav-wrapper .mobile_bar_nav .cta a .dskp{}
-
-
-header .container .nav-wrapper .mobile_bar_nav .cta a .mob{
-    display: none;
-}*/
 header .container .nav-wrapper .mobile_bar_nav .call a.mob,
 header .container .nav-wrapper .mobile_bar_nav .cta a .mob,
 .mobcontrol {
