@@ -20,12 +20,12 @@
                         <img src="rsc/baklogo.png" alt="BAK Logo" title="BAK Logo" />
                     </a>
                 </div>
-                <button class="mobcontrol menu_toggle btnlink neutral outline">
+                <button id="toggle" class="mobcontrol btnlink neutral outline">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
             <div class="mobile_bar_nav">
-                <button class="mobcontrol menu_close btnlink neutral outline">
+                <button id="close" class="mobcontrol btnlink neutral outline">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <nav class="menu">

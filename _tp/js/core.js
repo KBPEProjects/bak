@@ -1,5 +1,15 @@
 jQuery(document).ready(function(){
 
+    jQuery(".mobcontrol").click(function(){
+        const action= this.id;
+        if(action=="toggle"){
+            jQuery("header .container .nav-wrapper .mobile_bar_nav").addClass("menushow");
+        }else{
+            jQuery("header .container .nav-wrapper .mobile_bar_nav").removeClass("menushow");
+        }
+        
+    })
+
     if(jQuery('.classic-gallery-revolver').length > 0){
         jQuery('.classic-gallery-revolver').slick({
             fade: true,
@@ -29,7 +39,7 @@ jQuery(document).ready(function(){
             prevArrow:'<i class="fa-solid fa-chevron-left l"></i>',
             nextArrow:'<i class="fa-solid fa-chevron-right r"></i>',
             responsive: [
-                { breakpoint:1400,settings:{slidesToShow:4,slidesToScroll:3} },
+                { breakpoint:1400,settings:{slidesToShow:3,slidesToScroll:3} },
                 { breakpoint:1200,settings:{slidesToShow:3,slidesToScroll:2} },
                 { breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2} },
                 { breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1} },
