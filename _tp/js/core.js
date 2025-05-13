@@ -1,5 +1,10 @@
 jQuery(document).ready(function(){
 
+    jQuery(window).scroll(function(){
+        AdjustScrollNavbar();
+    });
+    AdjustScrollNavbar();
+
     jQuery(".mobcontrol").click(function(){
         const action= this.id;
         if(action=="toggle"){
@@ -61,4 +66,11 @@ jQuery(document).ready(function(){
             nextArrow:'<i class="fa-solid fa-chevron-right r"></i>',
         });
     }
-})
+});
+function AdjustScrollNavbar(){
+    if(jQuery(window).scrollTop() > 80) {
+        jQuery("header").addClass("hscrolled");
+    }else{
+        jQuery("header").removeClass("hscrolled");
+    }
+}

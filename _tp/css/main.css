@@ -29,6 +29,7 @@
 body {
   font-family: GothamHTFBook;
   font-size: 16px;
+  background-color: #2F2A2C;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -174,7 +175,7 @@ p.cta.call a {
 }
 
 .arrows-right {
-  padding: 0 5%;
+  padding: 0 10%;
 }
 .arrows-right .slick-arrow {
   cursor: pointer;
@@ -432,6 +433,10 @@ p.cta.call a {
 
 header {
   background-color: #2F2A2C;
+  z-index: 50;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 header .container {
   padding: 0 5%;
@@ -517,21 +522,27 @@ header .container .nav-wrapper .mobile_bar_nav nav ul li:first-child a {
   margin-left: 5px;
 }
 header .container .nav-wrapper .mobile_bar_nav nav ul li.current_page_item:first-child::marker {
-  color: #CCC1A7 !important;
+  color: #CCC1A7;
 }
 header .container .nav-wrapper .mobile_bar_nav nav ul li.current_page_item a {
-  color: #CCC1A7 !important;
+  color: #CCC1A7;
   border-bottom: 1px solid #CCC1A7 !important;
 }
 header .container .nav-wrapper .mobile_bar_nav .call {
   margin-right: 2%;
   font-family: GothamHTFMedium;
 }
+header.hscrolled .nav-wrapper .logo a {
+  padding: 20px 60px !important;
+}
 
 .splash-block {
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.splash-block .bgblack {
+  padding-top: 113px;
 }
 .splash-block .bgblack .splash-revolver .slick-arrow {
   top: 40%;
@@ -591,6 +602,7 @@ header .container .nav-wrapper .mobile_bar_nav .call {
   text-align: left;
 }
 
+header .container .nav-wrapper .mobile_bar_logobtn .logo a .mob,
 header .container .nav-wrapper .mobile_bar_nav .call a.mob,
 header .container .nav-wrapper .mobile_bar_nav .cta a .mob,
 .mobcontrol {
@@ -667,8 +679,12 @@ header .container .nav-wrapper .mobile_bar_nav .cta a .mob,
   header .container .nav-wrapper .mobile_bar_nav nav ul {
     display: block;
   }
+  header .container .nav-wrapper .mobile_bar_nav nav ul li:first-child::marker {
+    color: #2F2A2C !important;
+  }
   header .container .nav-wrapper .mobile_bar_nav nav ul li a {
-    padding: 2rem;
+    font-size: 1.5rem;
+    padding: 1rem;
     display: block;
     width: 100%;
   }
@@ -735,13 +751,26 @@ header .container .nav-wrapper .mobile_bar_nav .cta a .mob,
   .bon-accord-kitchens-styles .feature-block .feature-photo {
     height: 350px;
   }
+  header .container .nav-wrapper .mobile_bar_logobtn .logo a {
+    background-color: transparent;
+  }
+  header .container .nav-wrapper .mobile_bar_logobtn .logo a .dskp {
+    display: none !important;
+  }
+  header .container .nav-wrapper .mobile_bar_logobtn .logo a .mob {
+    display: block !important;
+  }
 }
 @media (max-width: 575.98px) { /*SMALL*/
+  .splash-block .bgblack .splash-revolver .slidr-stage .slidr h1 {
+    font-size: 4.5rem;
+  }
   .content-block .heading-block {
     padding: 0 5%;
   }
+  /**/
   header .container .nav-wrapper .mobile_bar_logobtn .logo a {
-    padding: 10px !important;
+    padding-left: 0px !important;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }

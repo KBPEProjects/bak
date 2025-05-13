@@ -17,7 +17,8 @@
             <div class="mobile_bar_logobtn">
                 <div class="logo">
                     <a href="#">
-                        <img src="rsc/baklogo.png" alt="BAK Logo" title="BAK Logo" />
+                        <img class="mob" src="rsc/baklogo_neutral.png" alt="BAK Logo" title="BAK Logo" />
+                        <img class="dskp" src="rsc/baklogo.png" alt="BAK Logo" title="BAK Logo" />
                     </a>
                 </div>
                 <button id="toggle" class="mobcontrol btnlink neutral outline">

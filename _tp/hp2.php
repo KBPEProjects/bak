@@ -21,7 +21,7 @@ include("header.php");
         </div>
     </div>
 
-    <div class="content-block bon-accord-classic-kitchen-favourites">
+    <div class="content-block white bon-accord-classic-kitchen-favourites">
         <div class="container">
             <div class="heading-block">
                 <h2>Classic Kitchen Favourites</h2>
@@ -113,7 +113,7 @@ include("header.php");
         </div>
     </div>
 
-    <div class="content-block bon-accord-classic-kitchen-favourites">
+    <div class="content-block white bon-accord-classic-kitchen-favourites">
         <div class="container">
             <div class="heading-block">
                 <h2>It's all in the detail</h2>
@@ -143,7 +143,7 @@ include("header.php");
         </div>
     </div>
 
-    <div class="content-block bon-accord-kitchens-showroom">
+    <div class="content-block white bon-accord-kitchens-showroom">
         <div class="container">
             <ul class="vert">
                 <li>
