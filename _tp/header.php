@@ -14,30 +14,43 @@
 <header>
     <div class="container">
         <div class="nav-wrapper">
-            
-            <div class="logo">
-                <a href="#">
-                    <img src="rsc/baklogo.png" alt="BAK Logo" title="BAK Logo" />
-                </a>
+            <div class="mobile_bar_logobtn">
+                <div class="logo">
+                    <a href="#">
+                        <img src="rsc/baklogo.png" alt="BAK Logo" title="BAK Logo" />
+                    </a>
+                </div>
+                <button class="mobcontrol menu_toggle btnlink neutral outline">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
-
-            <nav class="menu">
-                <ul>
-                    <li class="current_page_item"><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Kitchens</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Inspiration</a></li>
-                    <li><a href="#">Our Showroom</a></li>
-                </ul>
-            </nav>
-            <div class="call">
-                <a href="tel:01224980221">Call 01224 980221</a>
+            <div class="mobile_bar_nav">
+                <button class="mobcontrol menu_close btnlink neutral outline">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <nav class="menu">
+                    <ul>
+                        <li class="current_page_item"><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Kitchens</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                        <li><a href="#">Our Showroom</a></li>
+                    </ul>
+                </nav>
+                <div class="call">
+                    <a class="dskp" href="tel:01224980221">Call 01224 980221</a>
+                    <a class="mob btnlink neutral outline" href="tel:01224980221">
+                        <i class="fa-solid fa-phone-flip"></i>
+                    </a>
+                </div>
+                <div class="cta">
+                    <a class="btnlink neutral" href="#">
+                        <span class="dskp">Book your Design Consultation</span>
+                        <span class="mob">Book Consultation</span>
+                    </a>
+                </div>
             </div>
-            <div class="cta">
-                <a class="btnlink neutral" href="#"><i class="fa-solid fa-pen-to-square"></i> Book your Design Consultation</a>
-            </div>
-
         </div>
     </div>
 </header>

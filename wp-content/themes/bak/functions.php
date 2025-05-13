@@ -77,6 +77,7 @@ function menu_settings_init() {
     $fields= [
         'menu_contact_number'=>"Main contact number is: ",
         'menu_CTA_button_label'=>"CTA button should read: ",
+        'menu_CTA_button_label_mobile'=>"(for mobile) CTA button should read: ",
         'menu_CTA_button_url'=>"Button should divert to this URL: ",
         'footer_contact_speil'=>"Wording for the Contact footer: "
     ];

@@ -84,7 +84,7 @@ include("header.php");
                     <p>
                         Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodit. Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodi cumquat ugia volum sumquodit.
                     </p>
-                    <p cl>
+                    <p>
                         <a class="btnlink outline blue" href="#">Read Reviews</a>
                     </p>
                 </div>
@@ -114,14 +114,16 @@ include("header.php");
         <div class="feature-block">
             <div class="feature-photo" style="background-image:url(rsc/Lumina-Kitchen-Gallery-5.jpg)"></div>
             <div class="feature-content paddr">
-                <h2>Browse our Luxury <br /> Fitted Kitchens</h2>
-                <p>
-                    Our kitchen styles range from traditional shaker kitchen designs to cutting edge handleless kitchens.<br/>
-                    Choose from homely matt kitchens, sleek gloss kitchen finishes or charming traditional wood kitchens.
-                </p>
-                <p>
-                    <a class="btnlink outline neutral" href="#">Explore Collections</a>
-                </p>
+                <div class="container">
+                    <h2>Browse our Luxury <br /> Fitted Kitchens</h2>
+                    <p>
+                        Our kitchen styles range from traditional shaker kitchen designs to cutting edge handleless kitchens.<br/>
+                        Choose from homely matt kitchens, sleek gloss kitchen finishes or charming traditional wood kitchens.
+                    </p>
+                    <p>
+                        <a class="btnlink outline neutral" href="#">Explore Collections</a>
+                    </p>                    
+                </div>
             </div>
         </div>
     </div>

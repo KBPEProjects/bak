@@ -26,6 +26,7 @@ p.cta{
 }
 .bgblack{ background-color: rgba(0,0,0,0.5);}
 .btnlink{
+    cursor: pointer;
     font-family: GothamHTFBook;
     text-transform: uppercase;
     padding: 15px 35px;
@@ -89,8 +90,8 @@ p.cta{
             a{
                 width: auto;
                 img{
-                    width:100%;
-                    height: 100px;
+                    width: 280px;
+                    height: auto;
                 }
             } 
         }
@@ -190,7 +191,7 @@ p.cta{
         background-color: $col_white;
         color: $col_dark;
         .feature-content{
-            padding: 70px;
+            padding: 4rem;
             align-self: flex-end;
         }
     }
@@ -358,3 +359,5 @@ p.cta{
 }
 
 @import "_header";
+
+@import "_mobile";

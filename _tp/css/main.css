@@ -65,6 +65,7 @@ p.cta.call a {
 }
 
 .btnlink {
+  cursor: pointer;
   font-family: GothamHTFBook;
   text-transform: uppercase;
   padding: 15px 35px;
@@ -138,8 +139,8 @@ p.cta.call a {
   width: auto;
 }
 .content-block ul li a img {
-  width: 100%;
-  height: 100px;
+  width: 280px;
+  height: auto;
 }
 .content-block.dark {
   color: #FFFFFF;
@@ -244,7 +245,7 @@ p.cta.call a {
   color: #2F2A2C;
 }
 .bon-accord-kitchens-styles .feature-block .feature-content {
-  padding: 70px;
+  padding: 4rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -452,55 +453,77 @@ header .container .nav-wrapper a {
   text-decoration: none;
   text-transform: uppercase;
 }
-header .container .nav-wrapper .logo a {
+header .container .nav-wrapper .mobile_bar_logobtn .logo a {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   display: block;
   padding: 40px 60px;
   background-color: #FFFFFF;
 }
-header .container .nav-wrapper .logo a img {
+header .container .nav-wrapper .mobile_bar_logobtn .logo a img {
   height: 50px;
 }
-header .container .nav-wrapper nav {
+header .container .nav-wrapper .mobile_bar_nav {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 2%;
-}
-header .container .nav-wrapper nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+}
+header .container .nav-wrapper .mobile_bar_nav nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 0 0 2%;
+}
+header .container .nav-wrapper .mobile_bar_nav nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style: none;
   list-style-type: none;
 }
-header .container .nav-wrapper nav ul li {
+header .container .nav-wrapper .mobile_bar_nav nav ul li {
   margin-right: 3%;
 }
-header .container .nav-wrapper nav ul li a {
+header .container .nav-wrapper .mobile_bar_nav nav ul li a {
   padding-bottom: 8px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  white-space: nowrap;
 }
-header .container .nav-wrapper nav ul li:first-child::marker {
+header .container .nav-wrapper .mobile_bar_nav nav ul li a:hover {
+  color: #CCC1A7;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header .container .nav-wrapper .mobile_bar_nav nav ul li:first-child::marker {
   content: "\f015"; /* FontAwesome Unicode */
   font-family: "Font Awesome 6 Free";
   color: #FFFFFF;
   font-weight: bold;
 }
-header .container .nav-wrapper nav ul li:first-child a {
+header .container .nav-wrapper .mobile_bar_nav nav ul li:first-child a {
   margin-left: 5px;
 }
-header .container .nav-wrapper nav ul li.current_page_item:first-child::marker {
+header .container .nav-wrapper .mobile_bar_nav nav ul li.current_page_item:first-child::marker {
   color: #CCC1A7 !important;
 }
-header .container .nav-wrapper nav ul li.current_page_item a {
+header .container .nav-wrapper .mobile_bar_nav nav ul li.current_page_item a {
   color: #CCC1A7 !important;
   border-bottom: 1px solid #CCC1A7 !important;
 }
-header .container .nav-wrapper .call {
+header .container .nav-wrapper .mobile_bar_nav .call {
   margin-right: 2%;
   font-family: GothamHTFMedium;
 }
@@ -566,4 +589,158 @@ header .container .nav-wrapper .call {
 }
 .splash-block .bgblack .splash-revolver .slidr-stage .slidr.lef {
   text-align: left;
+}
+
+/*
+header{
+    .container{
+        .nav-wrapper{
+            .mobile_bar_nav{
+                .cta{
+                    a{
+                        .mob{
+                            @media (min-width:767px) { 
+                                display: none !important
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ SPECIFIC FIXES...*/
+/*
+@media (min-width:767px) {  APPLY TO ALL SCREENS LARGER THAN 767 
+    .mob_hide_dskp{ display: none !important}
+}
+header .nav-wrapper .mobile_bar_nav .cta a .mob{}
+header .nav-wrapper .mobile_bar_nav .cta a .dskp{}
+
+
+header .container .nav-wrapper .mobile_bar_nav .cta a .mob{
+    display: none;
+}*/
+header .container .nav-wrapper .mobile_bar_nav .call a.mob,
+header .container .nav-wrapper .mobile_bar_nav .cta a .mob,
+.mobcontrol {
+  display: none;
+}
+
+@media (max-width: 1819.98px) { /*2XLARGE*/
+  header .container {
+    padding: 0 2% !important;
+  }
+  header .container .nav-wrapper .mobile_bar_nav .cta a .dskp {
+    display: none;
+  }
+  header .container .nav-wrapper .mobile_bar_nav .cta a .mob {
+    display: block !important;
+  }
+}
+@media (max-width: 1499.98px) { /*2XLARGE*/
+  .tightr {
+    padding: 0 10% !important;
+  }
+  header .container .nav-wrapper .mobile_bar_nav .btnlink {
+    padding: 15px !important;
+  }
+  header .container .nav-wrapper .mobile_bar_nav .call a.dskp {
+    display: none;
+  }
+  header .container .nav-wrapper .mobile_bar_nav .call a.mob {
+    display: block !important;
+  }
+}
+@media (max-width: 1349.98px) { /*2XLARGE*/
+  header .container .nav-wrapper .mobile_bar_logobtn {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .container .nav-wrapper .mobile_bar_nav {
+    display: none;
+  }
+  header .container .nav-wrapper .mobcontrol {
+    display: block !important;
+    font-size: 1.25rem;
+  }
+  header .container .nav-wrapper .mobcontrol:hover {
+    font-size: 2rem;
+  }
+  header .container .nav-wrapper .mobile_bar_logobtn .logo a {
+    padding: 20px !important;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+@media (max-width: 1199.98px) { /*XLARGE*/
+  .tightr {
+    padding: 0 3% !important;
+  }
+}
+@media (max-width: 991.98px) { /*LARGE*/
+  .content-block ul {
+    display: block;
+  }
+  .bon-accord-kitchens-styles .feature-block .feature-content {
+    padding: 2rem;
+  }
+  .classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content {
+    padding: 2rem;
+  }
+  .classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content .classic-gallery-content-block li {
+    padding: 2rem;
+    border-right: none;
+    border-bottom: 1px solid #2F2A2C;
+  }
+  .classic-gallery .classic-gallery-block .classic-gallery-revolver .classic-gallery-content .classic-gallery-content-block li:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 767px) { /*MEDIUM*/
+  .feature-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .feature-block .feature-content.paddr {
+    padding: 2rem 0;
+  }
+  .feature-block .feature-photo,
+  .feature-block .feature-content {
+    width: 100%;
+  }
+  .bon-accord-kitchens-styles .feature-block {
+    display: block;
+    margin: 50px 5%;
+  }
+  .bon-accord-kitchens-styles .feature-block .feature-content,
+  .bon-accord-kitchens-styles .feature-block .feature-photo {
+    width: 100%;
+  }
+  .bon-accord-kitchens-styles .feature-block .feature-photo {
+    height: 350px;
+  }
+}
+@media (max-width: 575.98px) { /*SMALL*/
+  .content-block .heading-block {
+    padding: 0 5%;
+  }
+  header .container .nav-wrapper .mobile_bar_logobtn .logo a {
+    padding: 10px !important;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
 }/*# sourceMappingURL=main.css.map */
