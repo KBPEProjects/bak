@@ -1,5 +1,5 @@
 
-    <div class="content-block coreblue contact">
+    <div class="content-block coreblue bgowl contact">
         <div class="container">
             <div class="block-details">
                 <div class="heading-block">

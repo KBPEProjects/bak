@@ -39,11 +39,14 @@ header{
                         a{
                             padding-bottom: 8px;
                         }
-                        &:first-child::marker{
-                            content: "\f015"; /* FontAwesome Unicode */
-                            font-family: "Font Awesome 6 Free";
-                            color: $col_white;
-                            font-weight: bold;
+                        &:first-child{
+                            &::marker{
+                                content: "\f015"; /* FontAwesome Unicode */
+                                font-family: "Font Awesome 6 Free";
+                                color: $col_white;
+                                font-weight: bold;
+                            }
+                            a{ margin-left:5px; }
                         }
                         &.active:first-child::marker{
                             color: $col_neutral !important;

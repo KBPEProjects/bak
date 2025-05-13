@@ -47,7 +47,7 @@ include("header.php");
 
 
 
-    <div class="content-block lgrey bon-accord-latest-classic-kitchens">
+    <div class="content-block lgrey bgowl bon-accord-latest-classic-kitchens">
         <div class="container">
             <div class="heading-block">
                 <h2>Our latest Classic Kitchens</h2>
@@ -77,7 +77,7 @@ include("header.php");
         </div>
     </div>
 
-    <div class="content-block dark classic-gallery">
+    <div class="content-block dark bgowl classic-gallery">
         <div class="container">
             <div class="heading-block">
                 <h2>• The Classic Gallery •</h2>
@@ -177,9 +177,6 @@ include("header.php");
 
 
 
-
-
-
     <div class="content-block dark bon-accord-heather-classic-kitchen">
         <div class="container">
             <div class="feature-block">
@@ -202,11 +199,7 @@ include("header.php");
 
 
 
-
-
-
-
-    <div class="content-block lgrey testimonials-block">
+    <div class="content-block lgrey bgowl testimonials-block">
         <div class="container">
             <div class="heading-block">
                 <h2>Why customers love Bon Accord</h2>

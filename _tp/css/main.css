@@ -156,6 +156,12 @@ p.cta.call a {
   color: #FFFFFF;
   text-decoration: none;
 }
+.content-block.coreblue.contact {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../rsc/hp1_owl_contact.png");
+}
 .content-block .heading-block {
   padding: 0 15%;
 }
@@ -380,6 +386,31 @@ p.cta.call a {
   margin-bottom: 0;
 }
 
+.bgowl {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+.bgowl.why-choose-bon-accord-kitchens {
+  background-image: url("../../rsc/hp1_owl_choose_kitchens.png");
+}
+.bgowl.bon-accord-kitchens-luxury-fitted {
+  background-image: url("../../rsc/hp1_owl_luxury.png");
+}
+.bgowl.contact {
+  background-image: url("../../rsc/hp1_owl_contact.png");
+  background-position: center;
+}
+.bgowl.bon-accord-latest-classic-kitchens {
+  background-image: url("../../rsc/hp2_owl_classic_kitchens.png");
+}
+.bgowl.classic-gallery {
+  background-image: url("../../rsc/hp2_owl_classic_gallery.png");
+}
+.bgowl.testimonials-block {
+  background-image: url("../../rsc/hp2_owl_testimonial.png");
+}
+
 .container {
   padding: 0 5%;
 }
@@ -444,6 +475,9 @@ header .container .nav-wrapper nav ul li:first-child::marker {
   font-family: "Font Awesome 6 Free";
   color: #FFFFFF;
   font-weight: bold;
+}
+header .container .nav-wrapper nav ul li:first-child a {
+  margin-left: 5px;
 }
 header .container .nav-wrapper nav ul li.active:first-child::marker {
   color: #CCC1A7 !important;

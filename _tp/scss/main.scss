@@ -112,6 +112,13 @@ p.cta{
             color: $col_white;
             text-decoration: none;
         }
+        &.contact{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("../../rsc/hp1_owl_contact.png");
+        }
+
     }
     .heading-block{
         padding: 0 15%;
@@ -333,6 +340,17 @@ p.cta{
 }
 .bon-accord-kitchens-next-steps p{
     margin-bottom: 0;
+}
+.bgowl{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    &.why-choose-bon-accord-kitchens{ background-image: url("../../rsc/hp1_owl_choose_kitchens.png"); }
+    &.bon-accord-kitchens-luxury-fitted{ background-image: url("../../rsc/hp1_owl_luxury.png"); }
+    &.contact{ background-image: url("../../rsc/hp1_owl_contact.png"); background-position: center; }
+    &.bon-accord-latest-classic-kitchens{ background-image: url("../../rsc/hp2_owl_classic_kitchens.png"); }
+    &.classic-gallery{ background-image: url("../../rsc/hp2_owl_classic_gallery.png"); }
+    &.testimonials-block{ background-image: url("../../rsc/hp2_owl_testimonial.png"); }
 }
 
 @import "_header";

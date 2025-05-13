@@ -74,7 +74,7 @@ include("header.php");
         </div>
     </div>
 
-    <div class="content-block white why-choose-bon-accord-kitchens">
+    <div class="content-block white bgowl why-choose-bon-accord-kitchens">
         <div class="container">
             <div class="feature-block">
                 <div class="feature-photo roundr" style="background-image:url(rsc/Riva889_MP_14799_20.jpg)">
@@ -110,7 +110,7 @@ include("header.php");
         </div>
     </div>
 
-    <div class="content-block dark bon-accord-kitchens-luxury-fitted extended">
+    <div class="content-block dark bgowl bon-accord-kitchens-luxury-fitted extended">
         <div class="feature-block">
             <div class="feature-photo" style="background-image:url(rsc/Lumina-Kitchen-Gallery-5.jpg)"></div>
             <div class="feature-content paddr">
