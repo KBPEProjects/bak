@@ -292,7 +292,8 @@ p.cta{
 }
 
 /*HOMEPAGE 2*/
-.vert{ 
+.vert{
+    align-items: flex-start !important;
     margin-bottom:0 !important;
     padding: 0 7%;
     li{

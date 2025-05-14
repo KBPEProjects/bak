@@ -42,15 +42,19 @@ wp_nav_menu(array(
 ?>
                 </nav>
                 <div class="call">
-                    <a class="dskp" href="tel:01224980221">Call 01224 980221</a>
-                    <a class="mob btnlink neutral outline" href="tel:01224980221">
+                    
+
+
+
+                    <a class="dskp" href="tel:<?= str_replace(" ","",get_option('menu_contact_number'));?>">Call <?= get_option('menu_contact_number');?></a>
+                    <a class="mob btnlink neutral outline" href="tel:<?= str_replace(" ","",get_option('menu_contact_number'));?>">
                         <i class="fa-solid fa-phone-flip"></i>
                     </a>
                 </div>
                 <div class="cta">
-                    <a class="btnlink neutral" href="#">
-                        <span class="dskp">Book your Design Consultation</span>
-                        <span class="mob">Book Consultation</span>
+                    <a class="btnlink neutral" href="<?= get_option('menu_CTA_button_url');?>">
+                        <span class="dskp"><?= get_option('menu_CTA_button_label');?></span>
+                        <span class="mob"><?= get_option('menu_CTA_button_label_mobile');?></span>
                     </a>
                 </div>
             </div>

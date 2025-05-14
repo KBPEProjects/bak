@@ -332,6 +332,9 @@ p.cta.call a {
 
 /*HOMEPAGE 2*/
 .vert {
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
   margin-bottom: 0 !important;
   padding: 0 7%;
 }
@@ -533,7 +536,7 @@ header .container .nav-wrapper .mobile_bar_nav .call {
   font-family: GothamHTFMedium;
 }
 header.hscrolled .nav-wrapper .logo a {
-  padding: 20px 60px !important;
+  padding: 20px 40px !important;
 }
 
 .splash-block {
