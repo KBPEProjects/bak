@@ -130,7 +130,7 @@ print_r(get_fields(get_the_ID(),false,false), );
     <div class="content-block neutral bon-accord-kitchens-collection-brochure">
         <div class="container">
             <div class="feature-block">
-                <div class="feature-content paddr">
+                <div class="feature-content paddr mob_order2">
                     <h2><?= nl2brX(get_field('H1_VB_feature_heading'));?></h2>
                     <p><?= nl2brX(get_field('H1_VB_feature_paragraph'));?></p>
                     <p>
@@ -138,7 +138,7 @@ print_r(get_fields(get_the_ID(),false,false), );
                             <?= get_field('H1_VB_feature_cta_label');?></a>
                     </p>
                 </div>
-                <div class="feature-photo roundr" style="background-image:url(<?= get_field('H1_VB_feature_photo');?>)">
+                <div class="feature-photo roundr mob_order1" style="background-image:url(<?= get_field('H1_VB_feature_photo');?>)">
                 </div>
             </div>
         </div>

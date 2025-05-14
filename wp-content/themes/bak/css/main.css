@@ -462,7 +462,7 @@ header .container .nav-wrapper .mobile_bar_logobtn .logo a {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   display: block;
-  padding: 40px 60px;
+  padding: 30px 40px;
   background-color: #FFFFFF;
 }
 header .container .nav-wrapper .mobile_bar_logobtn .logo a img {
@@ -613,25 +613,31 @@ header .container .nav-wrapper .mobile_bar_nav .cta a .mob,
   header .container {
     padding: 0 2% !important;
   }
-  header .container .nav-wrapper .mobile_bar_nav .cta a .dskp {
-    display: none;
-  }
-  header .container .nav-wrapper .mobile_bar_nav .cta a .mob {
-    display: block !important;
-  }
 }
-@media (max-width: 1499.98px) { /*2XLARGE*/
-  .tightr {
-    padding: 0 10% !important;
-  }
-  header .container .nav-wrapper .mobile_bar_nav .btnlink {
-    padding: 15px !important;
+@media (max-width: 1599.98px) { /*2XLARGE*/
+  header .container {
+    padding: 0 2% !important;
   }
   header .container .nav-wrapper .mobile_bar_nav .call a.dskp {
     display: none;
   }
   header .container .nav-wrapper .mobile_bar_nav .call a.mob {
     display: block !important;
+    padding: 15px !important;
+  }
+}
+@media (max-width: 1499.98px) { /*2XLARGE*/
+  header .container .nav-wrapper .mobile_bar_nav .cta a .dskp {
+    display: none;
+  }
+  header .container .nav-wrapper .mobile_bar_nav .cta a .mob {
+    display: block !important;
+  }
+  .tightr {
+    padding: 0 10% !important;
+  }
+  header .container .nav-wrapper .btnlink {
+    padding: 15px !important;
   }
 }
 @media (max-width: 1349.98px) { /*2XLARGE*/
@@ -762,8 +768,17 @@ header .container .nav-wrapper .mobile_bar_nav .cta a .mob,
   }
 }
 @media (max-width: 575.98px) { /*SMALL*/
+  h2 {
+    font-size: 2rem;
+  }
+  .arrows-right {
+    padding: 0;
+  }
+  .splash-block .bgblack {
+    padding-top: 0;
+  }
   .splash-block .bgblack .splash-revolver .slidr-stage .slidr h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
   .content-block .heading-block {
     padding: 0 5%;
@@ -773,5 +788,31 @@ header .container .nav-wrapper .mobile_bar_nav .cta a .mob,
     padding-left: 0px !important;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+  }
+  header .container .nav-wrapper .mobile_bar_logobtn .logo a img {
+    height: 40px;
+    margin: 5px 0;
+  }
+  .content-block ul li a img {
+    width: 220px;
+  }
+  .bon-accord-heather-classic-kitchen .feature-block .feature-photo .feature-photo-inset {
+    margin-top: -25px;
+    margin-right: -25px;
+    width: 220px;
+    height: 220px;
+  }
+  .mob_order1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .mob_order2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .splash-block .bgblack .splash-revolver .slidr-stage .slidr p a {
+    margin: 22px 2rem 0 2rem !important;
   }
 }/*# sourceMappingURL=main.css.map */
