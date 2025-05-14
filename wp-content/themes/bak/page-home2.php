@@ -2,18 +2,27 @@
 /* Template Name: Homepage2 */ 
 get_header();
 ?>
-    <div class="splash-block" style="background-image:url(rsc/Carnegie-stone-grey-heritage-grey-Gallery-1.jpg)">
+    <div class="splash-block" style="background-image:url(<?= get_the_post_thumbnail_url();?>)">
         <div class="bgblack">
             <div class="container">
-                <div class="splash-revolver arrows-right">
-                    <div>
-                        <div class="slidr-stage shortr">
-                            <div class="slidr lef">
-                <h1>Classic Kitchen <br/>Collection</h1>
-                <p>Atur sim rerum list fugia volum sumquodit velliquis cumquat ugia volum sumquodit. Atur sim rerum list fugia volum</p>
+                <div class="splash-revolver arrows-right"><?php
+                if( have_rows('G_SL_slider') ){
+                    while( have_rows('G_SL_slider') ){
+                        the_row();
+                        $shead = nl2brX(get_sub_field('G_SL_slide_heading'));
+                        $ssubhead = nl2brX(get_sub_field('G_SL_slide_subtitle'));
+                        $scta_label = get_sub_field('G_SL_slide_cta_label');
+                        $scta_url = get_sub_field('G_SL_slide_cta_url'); ?>
+                        <div>
+                            <div class="slidr-stage shortr">
+                                <div class="slidr lef">
+                                    <h1><?= $shead;?></h1>
+                                    <p><?= $ssubhead;?></p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </div><?php
+                    }
+                } ?>
                 </div>
             </div>
         </div>
@@ -22,54 +31,51 @@ get_header();
     <div class="content-block white bon-accord-classic-kitchen-favourites">
         <div class="container">
             <div class="heading-block">
-                <h2>Classic Kitchen Favourites</h2>
-                <p>Our customer favourites.. Designed for modern living, individuality and practicality that will sit comfortably in the busy world and lifestyles of today. Recently, modern classic style has enjoyed a resurgence in popularity in the kitchen.</p>
+                <h2><?= nl2brX(get_field('H2_CKF_heading'));?></h2>
+                <p><?= nl2brX(get_field('H2_CKF_heading_description'));?></p>
             </div>
-            <ul class="vert">
-            <?php for($i=0;$i<3;$i++){ ?><li>
-                <div class="feature-block">
-                    <div class="feature-photo" style="background-image:url(rsc/Ashbourne-gallery-8.jpg)">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <div class="feature-content lined">
-                        <h3>Ashbourne</h3>
-                        <p>
-                            <strong>Grained Painted Effect</strong> volum sumquodit velliquis cumquat ugia volum sumquodit.
-                        </p>
-                    </div>
-                </div></li><?php
+            <ul class="vert"><?php
+            if( have_rows('H2_CKF_sample_kitchens') ){
+                while( have_rows('H2_CKF_sample_kitchens') ){
+                    the_row(); ?><li>
+                    <div class="feature-block">
+                        <div class="feature-photo" style="background-image:url(<?= get_sub_field('H2_CKF_kitchen_photo');?>)">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="feature-content lined">
+                            <h3><?= nl2brX(get_sub_field('H2_CKF_kitchen_title'));?></h3>
+                            <?= nl2brX(get_sub_field('H2_CKF_kitchen_description'));?>
+                        </div>
+                    </div></li><?php
+                }
             } ?>
             </ul>
         </div>
     </div>
 
-
-
     <div class="content-block lgrey bgowl bon-accord-latest-classic-kitchens">
         <div class="container">
             <div class="heading-block">
-                <h2>Our latest Classic Kitchens</h2>
-                <p>
-                    Designed for modern living, individuality and practicality that will sit comfortably in the busy world and lifestyles of today.<br/> 
-                    Recently, modern classic style has enjoyed a resurgence in popularity in the kitchen.
-                </p>
+                <h2><?= nl2brX(get_field('H2_LCK_heading'));?></h2>
+                <p><?= nl2brX(get_field('H2_LCK_heading_description'));?></p>
             </div>
-            <ul class="vert">
-            <?php for($i=0;$i<2;$i++){ ?><li>
-                <div class="feature-block">
-                    <div class="feature-photo roundr" style="background-image:url(rsc/Ashbourne-gallery-7.jpg)">
-                        <img src="rsc/" alt="" title="" />
-                    </div>
-                    <div class="feature-content">
-                        <h3>Ashbourne</h3>
-                        <p>
-                            <strong></strong> short description of kitchen range and style here.
-                        </p>
-                        <p>
-                            <a class="btnlink outline blue" href="#">View Gallery</a>
-                        </p>
-                    </div>
-                </div></li><?php
+            <ul class="vert"><?php
+            if( have_rows('H2_LCK_classic_kitchens') ){
+                while( have_rows('H2_LCK_classic_kitchens') ){
+                    the_row(); ?><li>
+                    <div class="feature-block">
+                        <div class="feature-photo roundr" style="background-image:url(<?= get_sub_field('H2_LCK_kitchen_photo');?>)">
+                        </div>
+                        <div class="feature-content">
+                            <h3><?= get_sub_field('H2_LCK_kitchen_title');?></h3>
+                            <?= get_sub_field('H2_LCK_kitchen_description');?>
+                            <p>
+                                <a class="btnlink outline blue" href="<?= get_sub_field('H2_LCK_kitchen_cta_url');?>">
+                                    <?= get_sub_field('H2_LCK_kitchen_cta_label');?></a>
+                            </p>
+                        </div>
+                    </div></li><?php
+                }
             } ?>
             </ul>
         </div>
@@ -78,34 +84,31 @@ get_header();
     <div class="content-block dark bgowl classic-gallery">
         <div class="container">
             <div class="heading-block">
-                <h2>• The Classic Gallery •</h2>
-                <p>
-                    This is a place to view all of the particular kitchen range together. Full width imagery, side by side presenting range, colour and features for the customer to browse and compare.
-                </p>
+                <h2><?= nl2brX(get_field('H2_CLG_heading'));?></h2>
+                <p><?= nl2brX(get_field('H2_CLG_heading_description'));?></p>
             </div>
             <div class="classic-gallery-block">
-                <div class="classic-gallery-revolver arrows-right">
-                    <?php 
-                    $slides= [
-                        ["Kitchen Range","Ashbourne Classic Kitchen <br />Painted Solid Ash","rsc/Ashbourne-gallery-2.jpg"],
-                        ["Colour","Stone Worktops<br />Heritage Grey Doors","rsc/Ashbourne-gallery-7.jpg"],
-                        ["Features","Add feature if all<br />available and suitable","rsc/Ashbourne-gallery-8.jpg"]
-                    ];
-                    foreach($slides as $i => $d){ ?>
-                        <div>
-                            <div class="photo-slide" style="background-image:url(<?= $d[2];?>)"></div>
-                            <div class="classic-gallery-content">
-                                <ul class="classic-gallery-content-block">
-                                    <?php foreach($slides as $si => $sd){ ?>
-                                    <li class="<?= ($i==$si ? "active":"");?>">
-                                        <h3><?= $sd[0];?></h3>
-                                        <p><?= $sd[1];?></p>
-                                    </li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                        </div>
-                    <?php } ?>
+                <div class="classic-gallery-revolver arrows-right"><?php
+                    if( have_rows('H2_CLG_classic_gallery_kitchens') ){
+                        $slides = get_field('H2_CLG_classic_gallery_kitchens' );
+                        foreach($slides as $i => $d){
+                            the_row(); ?>
+                            <div>
+                                <div class="photo-slide" style="background-image:url(<?= $d['H2_CLG_kitchen_photo'];?>)"></div>
+                                <div class="classic-gallery-content">
+                                    <ul class="classic-gallery-content-block">
+                                        <?php foreach($slides as $si => $sd){ ?>
+                                        <li class="<?= ($i==$si ? "active":"");?>">
+                                            <h3><?= $sd['H2_CLG_kitchen_title'];?></h3>
+                                            <p><?= $sd['H2_CLG_kitchen_features'];?></p>
+                                        </li>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
+                            </div><?php
+                        }
+                    } 
+                    ?>
                 </div>
             </div>
         </div>
@@ -114,29 +117,34 @@ get_header();
     <div class="content-block white bon-accord-classic-kitchen-favourites">
         <div class="container">
             <div class="heading-block">
-                <h2>It's all in the detail</h2>
-                <p>Add a personal touch to any kitchen range with customisable, bespoke elements and features designed to elevate the style and functionality of your space. Create your dream kitchen, tailored to your unique taste and lifestyle.</p>
+                <h2><?= nl2brX(get_field('H2_ATD_heading'));?></h2>
+                <p><?= nl2brX(get_field('H2_ATD_heading_description'));?></p>
             </div>
             <ul class="vert">
-            <?php for($i=0;$i<3;$i++){ ?><li>
-                <div class="feature-block">
-                    <div class="feature-photo" style="background-image:url(rsc/Knob-Handles-Inner.jpg)">
-                    </div>
-                    <div class="feature-content">
-                        <h3>Worktops</h3>
-                        <p>We have a stunning array of workstops to complement your kitchen style...Us am explict invelectiam, con nem fuga. Aliquia dolent laut quame perions equatu.</p>
-                    </div>
-                </div></li><?php
+            <?php
+            if( have_rows('H2_ATD_sample_kitchens') ){
+                while( have_rows('H2_ATD_sample_kitchens') ){
+                    the_row(); ?><li>
+                    <div class="feature-block">
+                        <div class="feature-photo" style="background-image:url(<?= get_sub_field('H2_ATD_kitchen_photo');?>)">
+                        </div>
+                        <div class="feature-content">
+                            <h3><?= get_sub_field('H2_ATD_kitchen_title');?></h3>
+                            <p><?= get_sub_field('H2_ATD_kitchen_description');?></p>
+                        </div>
+                    </div></li><?php
+                }
             } ?>
             </ul>
         </div>
     </div>
 
+
     <div class="content-block coreblue bon-accord-kitchens-next-steps">
         <div class="container">
             <div class="heading-block">
-                <h2>Next Steps</h2>
-                <p>Discover the full range of Kitchens, styles, colours and features by exploring our<br /> state of the art showroom or booking a <a href="#">Free Design Appointment.</a></p>
+                <h2><?= nl2brX(get_field('H2_NXT_heading'));?></h2>
+                <p><?= nl2brX(get_field('H2_NXT_heading_description'));?></p>
             </div>
         </div>
     </div>
@@ -144,108 +152,102 @@ get_header();
     <div class="content-block white bon-accord-kitchens-showroom">
         <div class="container">
             <ul class="vert">
-                <li>
-                    <div class="feature-block">
-                        <div class="feature-photo svg">
-                            <img src="rsc/showroom-directions.png" alt="" title="" />
-                        </div>
-                        <div class="feature-content">
-                            <h3>Visit Aberdeen Showroom</h3>
-                            <p>Be inspired! Explore the full range of stunning Kitchen collections, workstops, colours and finishes in person</p>
-                            <p><a class="btnlink outline blue" href="#">GET DIRECTIONS</a></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="feature-block">
-                        <div class="feature-photo svg">
-                            <img src="rsc/showroom-design.png" alt="" title="" />
-                        </div>
-                        <div class="feature-content">
-                            <h3>Free Design Appointment</h3>
-                            <p>See your new Kitchen come to life from the comfort of your own home with one of our friendly Kitchen designer.</p>
-                            <p><a class="btnlink outline blue" href="#">BOOK DESIGN APPOINTMENT</a></p>
-                        </div>
-                    </div>
-                </li>
+                <?php
+                if( have_rows('H2_SR_visits') ){
+                    while( have_rows('H2_SR_visits') ){
+                        the_row(); ?><li>
+                            <div class="feature-block">
+                                <div class="feature-photo svg">
+                                    <img src="<?= get_sub_field('H2_SR_visit_photo');?>" alt="" title="" />
+                                </div>
+                                <div class="feature-content">
+                                    <h3><?= nl2brX(get_sub_field('H2_SR_visit_title'));?></h3>
+                                    <p><?= nl2brX(get_sub_field('H2_SR_visit_description'));?></p>
+                                    <p><a class="btnlink outline blue" href="<?= get_sub_field('H2_SR_visit_cta_url');?>">
+                                        <?= get_sub_field('H2_SR_visit_cta_label');?></a></p>
+                                </div>
+                            </div>
+                        </li><?php
+                    }
+                } ?>
             </ul>
         </div>
     </div>
-
-
-
 
     <div class="content-block dark bon-accord-heather-classic-kitchen">
         <div class="container">
             <div class="feature-block">
                 <div class="feature-content paddr">
-                    <h2>Heather's Classic <br /> Country Kitchen</h2>
+                    <h2><?= nl2brX(get_field('H2_HCK_feature_heading'));?></h2>
+                    <p><?= nl2brX(get_field('H2_HCK_feature_paragraph'));?></p>
                     <p>
-                        Get inspired by exploring our customer kitchens, showcasing favorite styles, trends, and features to bring to your own space.<br /> 
-                        See these kitchens in action and discover how Bon Accord Kitchens have truly become the heart of each home.
-                    </p>
-                    <p>
-                        <a class="btnlink neutral" href="#">View Kitchen</a>
+                        <a class="btnlink neutral" href="<?= get_field('H2_HCK_feature_cta_url');?>">
+                            <?= get_field('H2_HCK_feature_cta_label');?></a>
                     </p>
                 </div>
-                <div class="feature-photo roundr" style="background-image:url(rsc/Bloomsbury-Kitchen-Gallery-8.jpg)">
-                    <img class="feature-photo-inset" src="rsc/Brazen-Magnet-Milford-28.webp" alt="" title="" />
+                <div class="feature-photo roundr" style="background-image:url(<?= get_field('H2_HCK_feature_photo');?>)">
+                    <img class="feature-photo-inset" src="<?= get_field('H2_HCK_feature_inset_photo');?>" alt="" title="" />
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <div class="content-block lgrey bgowl testimonials-block">
         <div class="container">
             <div class="heading-block">
-                <h2>Why customers love Bon Accord</h2>
-                <p>Don't just take our word for it! Read the latest Bon Accord Kitchen reviews, according to our customers...</p>
+                <h2><?= nl2brX(get_field('H2_TML_heading'));?></h2>
+                <p><?= nl2brX(get_field('H2_TML_heading_description'));?></p>
             </div>
             <div class="testimonials-revolver arrows-right darkarrows">
-                <?php for($i=0;$i<6;$i++){ ?>
-                <div class="testimonial-block">
-                    <div class="testimonial-quote">
-                        <h3>“Top-notch service”</h3>
-                        <p class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </p>
-                        <p class="quote">
-                            “I'm thrilled with my new kitchen
-                            from Bon Accord Kitchens! The team
-                            was professional, friendly, and really
-                            listened to what I wanted. The design
-                            is beautiful, and the installation quality
-                            is excellent. Highly recommend for
-                            anyone looking for top-notch service!”
-                        </p>
-                        <h4>Mrs Duncan</h4>
-                    </div>
-                </div>
-                <?php } ?>
+            <?php
+            if( have_rows('H2_TML_testimonials') ){
+                while( have_rows('H2_TML_testimonials') ){
+                    the_row();
+                    $title = get_sub_field('H2_TML_testimonial_title');
+                    $rating = get_sub_field('H2_TML_testimonial_rating');
+                    $desc = get_sub_field('H2_TML_testimonial_description');
+                    $testby = get_sub_field('H2_TML_testimonial_by'); ?>
+                    <div class="testimonial-block">
+                        <div class="testimonial-quote">
+                            <h3>“<?= nl2brX($title);?>”</h3>
+                            <p class="rating">
+                                <?php for($i=0; $i<$rating; $i++){ ?>
+                                    <i class="fas fa-star"></i><?php
+                                } ?>
+                            </p>
+                            <p class="quote">
+                            <?= nl2brX($desc);?>
+                            </p>
+                            <h4><?= nl2brX($testby);?></h4>
+                        </div>
+                    </div><?php
+                }
+            } ?>
             </div>
         </div>
     </div>
 
-
     <div class="content-block white bon-accord-kitchens-manufacturers">
         <div class="container">
             <div class="heading-block">
-                <h2>Luxury for every lifestyle</h2>
-                <p>Discover beautifully crafted kitchens from three of the world's leading manufacturers, <br /> each offering unique styles and exclusive design features, tailored to your home and lifestyle.</p>
+                <h2><?= nl2brX(get_field('G_MF_heading_label'));?></h2>
+                <p><?= nl2brX(get_field('G_MF_description'));?></p>
             </div>
-            <ul class="tightr">
-                <li><a href=""><img src="rsc/brand_ballerina.png" alt="" title="" /></a></li>
-                <li><a href=""><img src="rsc/brand_masterclass.png" alt="" title="" /></a></li>
-                <li><a href=""><img src="rsc/brand_nobilia.png" alt="" title="" /></a></li>
+            <ul class="tightr"><?php
+            if( have_rows('G_MF_manufacturer') ){
+                while( have_rows('G_MF_manufacturer') ){
+                    the_row();
+                    $mname = get_sub_field('G_MF_manufacturer_name');
+                    $logo = get_sub_field('G_MF_manufacturer_logo');
+                    $cta_url = get_sub_field('G_MF_manufacturer_url'); ?>
+                    <li><a href="<?= $cta_url;?>"><img src="<?= $logo;?>" alt="<?= $mname;?>" title="<?= $mname;?>" /></a></li>
+                    <?php
+                }
+            } ?>
             </ul>
             <p>
-                <a class="btnlink" href="#">Kitchen Brands</a>
+                <a class="btnlink" href="<?= get_field('G_MF_cta_url');?>">
+                    <?= get_field('G_MF_cta_label');?></a>
             </p>
         </div>
     </div>
